@@ -1,0 +1,89 @@
+<app-pr-header></app-pr-header>
+
+<div class="layer1">
+    <div class="container">
+        <!-- <div *ngFor="let post of data_new" > -->
+        <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="30px">
+            <div fxLayout="column" fxFlex.gt-xs="50%">
+                <div fxLayout="row">
+                    <div fxFlex="50%" class="one">
+                        <div fxLayout.lt-sm="column" fxLayout.gt-xs="row">
+                            <div fxFlex.lt-sm="100%" fxFlex.gt-xs="70%" fxLayout="column" fxLayoutAlign.lt-sm="center center">
+                                <p class="para1">Total uploads</p>
+                                <p class="para2">Images: {{image_c}}</p>
+                                <p class="para2">Videos: {{video_c}}</p>
+                                <p class="para2">Articles: {{pdf_c}}</p>
+                                <p class="para2">Audios: {{audio_c}}</p>
+                                <!-- <p class="para2">{{post.image_uploaded}}</p> -->
+                            </div>
+                            <div fxFlex.lt-sm="100%" fxFlex.gt-xs="30%" fxLayoutAlign.lt-sm="center center">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxFlex="50%" class="one">
+                        <div fxLayout.lt-sm="column" fxLayout.gt-xs="row">
+                            <div fxFlex.lt-sm="100%" fxFlex.gt-xs="70%" fxLayout="column" fxLayoutAlign.lt-sm="center center">
+                                <p class="para1">Publishing status</p>
+                                <p class="para2">{{pub_status}}</p>
+                            </div>
+                            <div fxFlex.lt-sm="100%" fxFlex.gt-xs="30%" fxLayoutAlign.lt-sm="center center">
+                                <i class="far fa-calendar-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div fxLayout="row">
+                    <div fxFlex="50%" class="one">
+                        <div fxLayout.lt-sm="column" fxLayout.gt-xs="row">
+                            <div fxFlex.lt-sm="100%" fxFlex.gt-xs="70%" fxLayout="column" fxLayoutAlign.lt-sm="center center">
+                                <p class="para1">Check the final content</p>
+                                <a class="para2" href="https://connect.therightdoctors.com/single-video-check-for-doctors/{{videourl}}">Click to check your final content before publishing</a>
+                                <!-- <p class="para2" a href="https://connect.therightdoctors.com/single-video-check-for-doctors/{{videourl}}">https://connect.therightdoctors.com/single-video-check-for-doctors/{{videourl}}</p> -->
+                            </div>
+                            <!-- <div fxFlex.lt-sm="100%" fxFlex.gt-xs="30%" fxLayoutAlign.lt-sm="center center">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div fxFlex="50%" class="one">
+                        <div fxLayout.lt-sm="column" fxLayout.gt-xs="row">
+                            <div fxFlex.lt-sm="100%" fxFlex.gt-xs="70%" fxLayout="column" fxLayoutAlign.lt-sm="center center">
+                                <p class="para1">Earnings Due</p>
+                                <p class="para2">None</p>
+                            </div>
+                            <!-- <div fxFlex.lt-sm="100%" fxFlex.gt-xs="30%" fxLayoutAlign.lt-sm="center center">
+                                <i class="fas fa-hourglass-half"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" class="lastbtns">
+                    <div fxFlex="50%" fxLayoutAlign="center center" class="lastbtn1">
+                        <button mat-flat-button>VIEW SALES LEDGER</button>
+                    </div>
+                    <div fxFlex="50%" fxLayoutAlign="center center">
+                        <button mat-flat-button (click)="openDialog()">VIEW BANK DETAILS</button>
+                    </div>
+                </div> -->
+            </div>
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutGap="15px" fxLayoutAlign.gt-xs="center center">
+                <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%" fxLayout="column" class="start1" fxLayoutAlign="center center">
+                    <!-- <img src="https://storage.googleapis.com/web-assets/footer/doc1.png" style="width:50px;"> -->
+                    <span class="material-icons docs"  style="font-size:50px;">
+                        description
+                        </span>
+                    <h5 style="margin-top: 16px;">Publish New Content</h5>
+                    <!-- <p>Click here to start a New Publication</p> -->
+                    <a class="para2" href="https://knac.therightdoctors.com/Upload">Click here to start a New Publication</a>
+                </div>
+                <!-- <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%" class="earn1" fxLayout="column" fxLayoutAlign="center center">
+                    <i class="fas fa-bullhorn"></i>
+                    <h5>Refer A Friend</h5>
+                    <p>Invite your friends to publish and earn money</p>
+                </div> -->
+            </div>
+        </div>
+    <!-- </div> -->
+    </div>
+</div>

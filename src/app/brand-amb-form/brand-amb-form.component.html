@@ -1,0 +1,314 @@
+
+<app-brand-header></app-brand-header>
+
+<div class="container">
+<div class="clearfix Padd_top"></div>
+<div fxLayout="column" class="mat-points example-form" style="padding:10px;clear:both;">
+    <h2 class="ben-heading">Apply to the Program</h2>
+    <form class="example-form"  #edu="ngForm"  novalidate>
+    <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>First Name</mat-label>
+                    <input matInput [(ngModel)]="bap_details['f_name']"  name="f_name" id="f_name" #f_name="ngModel" placeholder="First Name" required>
+                    <mat-error *ngIf="f_name.invalid">
+                        First Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+        </div>
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput  [(ngModel)]="bap_details['l_name']"  name= "l_name" id = "l_name" #l_name="ngModel" placeholder="Last Name" required>
+                    <mat-error *ngIf="l_name.invalid">
+                        Last Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput [(ngModel)]="bap_details['email_id']" placeholder="Email " name="email_id" id="email_id" #email_id="ngModel" pattern="[^ @]*@[^ @]*" required>
+                    <mat-error *ngIf="email_id.invalid">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+        </div>
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Gender</mat-label>
+                    <mat-select [(ngModel)]="bap_details['gender']" name="degree" id="degree" #degree="ngModel" required>
+                        <mat-option value="Female">
+                            Female
+                        </mat-option>
+                        <mat-option value="Male">
+                            Male
+                        </mat-option>
+                        <mat-option value="Others">
+                            Others
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Mobile Number </mat-label>
+                    <input matInput [(ngModel)]="bap_details['mobile_num']" placeholder="Mobile " name="mobile_num" id="mobile_num" #mobile_num="ngModel" required>
+                    <mat-error *ngIf="mobile_num.invalid">
+                        Mobile Number is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+        </div>
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Year of Joining College </mat-label>
+                    <mat-select [(ngModel)]="bap_details['pass_in']"  name="pass_out" #pass_out='ngModel' required >
+                        <mat-option value="2019">
+                            2019
+                        </mat-option>
+                        <mat-option value="2018">
+                            2018
+                        </mat-option>
+                        <mat-option value="2017">
+                            2017
+                        </mat-option>
+                        <mat-option value="2016">
+                            2016
+                        </mat-option>
+                        <mat-option value="2015">
+                            2015
+                        </mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+            </p>
+        </div>
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Year of Passing Out</mat-label>
+                    <mat-select [(ngModel)]="bap_details['pass_out']"  name="pass_out" #pass_out='ngModel' required >
+                        <mat-option value="2022">
+                            2022
+                        </mat-option>
+                        <mat-option value="2021">
+                            2021
+                        </mat-option>
+                        <mat-option value="2020">
+                            2020
+                        </mat-option>
+                        <mat-option value="2019">
+                            2019
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div fxLayout="column">
+        <p>
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Full name of institution/Organization</mat-label>
+                <input matInput [(ngModel)]="bap_details['college']"  name="f_name"  #f_name="ngModel" placeholder="College ?" required>
+                <mat-error *ngIf="f_name.invalid">
+                    College is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </p>
+    </div>
+
+
+    <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>State</mat-label>
+                    <mat-select placeholder="select state"  (selectionChange)="onSelectstate(state.value)" name="state"
+                                [(ngModel)]="bap_details['state']" #state="ngModel">
+                        <mat-option value="select state">select state</mat-option>
+                        <mat-option *ngFor="let state of all_states" [value]="state.state_id">{{state.state_name}}</mat-option >
+                    </mat-select>
+                </mat-form-field>
+            </p>
+        </div>
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>City</mat-label>
+                    <mat-select placeholder="select city" [(ngModel)]="bap_details['city']" (selectionChange)="onSelectcity(city.value)" name="city" #city="ngModel">
+                        <mat-option value="select city">select city</mat-option>
+                        <mat-option *ngFor="let city of all_cities" [value]="city.city_id">{{city.city_name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div fxLayout="column">
+        <p>
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label> What is  TheRightDoctors Brand Ambassador Program to you ?</mat-label>
+                <input matInput [(ngModel)]="bap_details['bap-meaning']" placeholder="What is  TheRightDoctors Brand Ambassador Program to you ? " name="paddress"  #paddress="ngModel" required>
+                <mat-error *ngIf="paddress.invalid">
+                    Permanent Address is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </p>
+    </div>
+
+
+    <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+        <div fxFlex="">
+            <p>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label> How did you find out about TheRightDoctors ?</mat-label>
+                    <input matInput [(ngModel)]="bap_details['find-out']" placeholder="How did you find out about TheRightDoctors ? " name="paddress"  #paddress="ngModel" required>
+                </mat-form-field>
+            </p>
+        </div>
+
+    </div>
+
+
+
+    <div fxLayout="column" >
+
+        <p>
+            <mat-form-field appearance="outline" class="example-full-width" *ngIf="stream=='medical'">
+                <mat-label>According to you, who are the Leaders in Medical Science from you College ? </mat-label>
+                <input matInput [(ngModel)]="bap_details['key-doctors']" placeholder="According to you, who are the Leaders in Medical Science from you College ? " name="paddress"  #paddress="ngModel" required>
+
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="example-full-width" *ngIf="stream=='it'">
+                <mat-label>Do you have any previous experience of hosting Hackathons or Quizes ?  Please Describe your work experience " </mat-label>
+                <input matInput [(ngModel)]="bap_details['key-doctors']" placeholder="Do you have any previous experience of hosting a Hackathon or Quizes ?  Please Describe your work experience " name="paddress"  #paddress="ngModel" required>
+
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="example-full-width" *ngIf="stream=='management'">
+                <mat-label>Share your prior experience in organizing events in your college ?</mat-label>
+                <input matInput [(ngModel)]="bap_details['key-doctors']" placeholder="Share your prior experience in organizing events in your college ? If yes, Tell us more ? " name="paddress"  #paddress="ngModel" required>
+
+            </mat-form-field>
+        </p>
+
+    </div>
+
+    <p class="question">Refer your friends: Write down the names and phone numbers of 2 of your friends and refer them for the program</p>
+<div fxLayout="row" fxLayoutGap="25px" fxLayout.lt-md="column" fxLayoutGap.lt-md="0px">
+       <div fxFlex="">
+           <mat-form-field appearance="outline" class="example-full-width">
+               <mat-label> Friend 1 Name</mat-label>
+               <input matInput [(ngModel)]="bap_details['friend1_name']" placeholder="Name " name="paddress"  #paddress="ngModel" required>
+           </mat-form-field>
+       </div>
+       <div fxFlex="">
+           <mat-form-field appearance="outline" class="example-full-width">
+               <mat-label> Friend1 Number </mat-label>
+           <input matInput [(ngModel)]="bap_details['friend1_no']" placeholder="Number " name="paddress"  #paddress="ngModel" required>
+           </mat-form-field>
+       </div>
+</div>
+    <div fxLayout="row" fxLayoutGap="25px" fxLayout.lt-md="column" fxLayoutGap.lt-md="0px">
+        <div fxFlex="">
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label > Friend 2 Name</mat-label>
+                <input matInput [(ngModel)]="bap_details['friend2_name']" placeholder="Name " name="paddress"  #paddress="ngModel" required>
+            </mat-form-field>
+        </div>
+        <div fxFlex="">
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label > Friend 2 Number </mat-label>
+                <input matInput [(ngModel)]="bap_details['friend2_no']" placeholder="Number " name="paddress"  #paddress="ngModel" required>
+            </mat-form-field>
+        </div>
+    </div>
+
+
+
+    <div fxLayout="column" >
+        <p class="question">How Do you prefer to recieve information from TRD? </p>
+        <section class="example-section">
+            <mat-checkbox class="example-margin" [(ngModel)]="bap_details['sms_on']" name="sms"  #sms="ngModel">Text Message  </mat-checkbox>
+            <mat-checkbox class="example-margin" [(ngModel)]="bap_details['phone_on']" name="phone"  #phone="ngModel">Phone Call  </mat-checkbox>
+            <mat-checkbox class="example-margin" [(ngModel)]="bap_details['email_on']" name="email"  #email="ngModel">Email  </mat-checkbox>
+            <mat-checkbox class="example-margin" [(ngModel)]="bap_details['facebook_on']" name="fb"  #fb="ngModel">Facebook Message  </mat-checkbox>
+        </section>
+    </div>
+    <br/>
+    <div fxLayout="column">
+        <p class="question">Pick your Choice of Work</p>
+        <mat-radio-group
+                aria-labelledby="example-radio-group-label"
+                class="example-radio-group"
+                [(ngModel)]="favoriteSeason" name="choice" #choice="ngModel">
+            <mat-radio-button class="example-radio-button example-margin" *ngFor="let season of seasons" [value]="season">
+                {{season}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <br/>
+    <div fxLayout="column">
+        <p class="question">Do you give us Permission to check out your Social Media ?</p>
+
+
+        <section class="example-section">
+            <mat-radio-group
+                    aria-labelledby="example-radio-group-label"
+                    class="example-radio-group"
+                    [(ngModel)]="favoriteSeason2" name="fs2"  #fs2="ngModel">
+                <mat-radio-button class="example-radio-button example-margin"*ngFor="let season of seasons2" [value]="season">
+                    {{season}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </section>
+        <!--            <div>Your favorite season is: {{favoriteSeason2}}</div>-->
+        <div *ngIf="favoriteSeason2=='Yes'">
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>FaceBook ID?</mat-label>
+                <input matInput  [(ngModel)]="bap_details['facebook_id']"  name= "fbid" #fbid="ngModel" placeholder="Facebook ID" required>
+                <mat-error *ngIf="l_name.invalid">
+                    Facebook Account Name is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div *ngIf="favoriteSeason2=='No'">
+            <mat-label>Please Provide reason?</mat-label>
+            <mat-form-field  appearance="outline" class="example-full-width">
+                <input matInput  [(ngModel)]="bap_details['reason']"  name= "fbid" #fbid="ngModel" placeholder="Reason ?" >
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div fxLayout="row">
+        <button mat-flat-button color="primary" [disabled]="edu.form.invalid"  (click)="onSubmit()">Submit</button>
+    </div>
+<!--        <mat-label *ngIf="edu.form.invalid" color="warn"> Please fill all the details! </mat-label>-->
+
+    </form>
+</div>
+</div>

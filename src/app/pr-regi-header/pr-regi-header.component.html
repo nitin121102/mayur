@@ -1,0 +1,13 @@
+<header class="header" *ngIf="!login">
+    <div class="container">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="20" fxFlex.lt-md="50" fxLayoutAlign="start center">
+                <!-- <img src="/assets/r-logo.jpg" style="width:30px"/><span style="font-size:22px;">Publishers</span> -->
+                <h5 style="margin:0px;font-weight: bold;"><a href="https://editorial.therightdoctors.com">EDITORIAL</a></h5>
+            </div>
+            <div fxFlex="80" fxFlex.lt-md="50" align="right">
+            <button [routerLink]="['/login']" mat-stroked-button style="background-color: #fff;color:#005082;border:1px solid #005082;" >Login</button>
+            </div>
+        </div>
+    </div>
+</header>

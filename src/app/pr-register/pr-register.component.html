@@ -1,0 +1,149 @@
+
+<!-- <app-pr-header></app-pr-header> -->
+<app-pr-regi-header></app-pr-regi-header>
+<body>
+    <div class="bg">
+        <div class="container">
+            <div fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlex="30"></div>
+                <div fxFlex="40" class="pad-top-btm">
+                    <mat-card style="padding:10px;">
+                        <h4 class="login">Register</h4>
+                        <form role="form" (ngSubmit)="register()" #f="ngForm" novalidate class="example-form">
+                            <p>
+                                <mat-form-field  class="example-full-width">
+                                    <input matInput type="text" name="username" id="username"  placeholder="First Name" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.username"
+                                           #username="ngModel" required >
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        First Name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </p>
+                            <p>
+                                <mat-form-field  class="example-full-width">
+                                    <input matInput type="text" name="lastname" id="lastname"  placeholder="Last Name" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.lastname"
+                                           #username="ngModel" required >
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Last Name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </p>
+                           
+                            <p>      
+                                 <mat-form-field  class="example-full-width">
+                                <input matInput type="text" name="college" id="college"  placeholder="College/Institute Name" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.college"
+                                       #username="ngModel" required >
+                          
+                            </mat-form-field>
+                        </p>
+                    
+                    
+                        <p>      
+                             <mat-form-field  class="example-full-width">
+                            <input matInput type="text" name="curent_year" id="current_year"  placeholder="Current Year" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.current_year"
+                                   #username="ngModel" required >
+                      
+                        </mat-form-field>
+                    </p>
+                
+                <!-- <div *ngIf="model2.authority=='Individual'">
+                    <p>      
+                         <mat-form-field  class="example-full-width">
+                        <input matInput type="text" name="experience" id="experience"  placeholder="Years of experience" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.experience"
+                               #username="ngModel" required >
+                    </mat-form-field>
+                </p>
+            </div> -->
+                            <p>
+                                <mat-radio-group style="float: left;" [(ngModel)]="model2.gender" name="gender" #gender="ngModel" class="radio-button-class">
+                                    <mat-radio-button style="padding-right: 14px;" type="radio" name="gender" value="Male"
+                                    > Male</mat-radio-button>
+                                    <mat-radio-button type="radio"  name="gender" value="Female"
+                                    > Female</mat-radio-button>
+                                </mat-radio-group>
+                            </p>
+                            <p>
+                                <mat-form-field  class="example-full-width">
+                                  
+                                    <input matInput type="text" name="email" id="email"  placeholder="Email"  style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.email" #email="ngModel" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Valid email address is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </p>
+                            <p>
+                                <mat-form-field  class="example-full-width">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput type="password" name="password" id="password" [(ngModel)]="model2.password"  style="box-shadow:none;border:0;background:transparent" #password="ngModel"  placeholder="Password" required >
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Password is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </p>
+                            <p>
+                                <mat-form-field  class="example-full-width">
+                                    <mat-label>Confirm Password</mat-label>
+                                    <input matInput type="password" name="confirmpassword" id="confirmpassword" validateEqual="password" [(ngModel)]="model2.confirmpassword"  style="box-shadow:none;border:0;background:transparent" #confirmpassword="ngModel" pattern="{{password.value}}" placeholder="Confirm Password" required >
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Retype your Password
+                                    </mat-error>
+                                </mat-form-field>
+                            </p>
+
+                            <mat-form-field   class="example-full-width">
+                                <mat-label>Select Country Code</mat-label>
+                                <mat-select  name="country_code" placeholder="Select Country Code" [(value)]="selected" #country_code="ngModel"
+                                             [(ngModel)]="model2.country_code"  required>
+                                    <mat-option> Select Country Code</mat-option>
+                                    <mat-option value="+91">India +91</mat-option>
+                                    <mat-option value="+1"> +1 United state +1</mat-option>
+                                    <mat-option value="+44">+44 United Kingdom</mat-option>
+                                    <mat-option value="+971"> +971 United Arab Emirates</mat-option>
+                                    <mat-option value="+92">+92 pakistan</mat-option>
+                                    <mat-option value="+977"> +977 Nepal</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="selecte.hasError('required')">You must make a selection</mat-error>
+                            </mat-form-field>
+
+                            <p>
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Mobile No</mat-label>
+                                    <input matInput type="number" name ="mobile" id="mobile" placeholder="Mobile No." style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.mobile" #mobile="ngModel" pattern="[1-9]{1}[0-9]{9}" maxlength="10" required>
+                                </mat-form-field>
+                            </p>
+                            <!-- <div>
+                                <div *ngIf="verification_code">
+                                    <div fxLayout="row">
+                                        <div fxFlex="50%">
+                                    <mat-form-field style="width:50%;" ngStyle.xs="width:100%">
+                                        <input matInput placeholder="Enter your code" name="token" [(ngModel)]="model2.token" style="box-shadow:none;border:0;background:transparent" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div fxFlex="50%">
+                                    <button mat-raised-button color="primary" type="button" (click)="verify_code()">Verify</button>
+                                  </div>
+                                  </div>
+                                </div>
+                                <button mat-raised-button color="primary" type="button" *ngIf="!m_verify" (click)="phone_btn_onclick()">Verify Mobile Number</button>
+                            </div> -->
+                            <!-- <p>
+                                <mat-form-field  class="example-full-width">
+                                    <mat-label>Authority</mat-label>
+                                    <input matInput type="text" name ="authority" value="" id="authority" placeholder="Authority" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.authority" #authority="ngModel" required>
+                                </mat-form-field>
+                            </p> -->
+
+                            <!-- <p>
+                                Please choose your payment plan <a [routerLink]="['/packages']">here</a>
+                            </p> -->
+
+                            <button mat-flat-button color="primary" [disabled]="!f.form.valid">Submit</button>
+                            <p style="text-align:center;margin-top:10px;">Already Have an Account ? <span><a [routerLink]="['/login']" style="text-decoration: underline;padding-left:10px;">Login</a></span></p>
+                        </form>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

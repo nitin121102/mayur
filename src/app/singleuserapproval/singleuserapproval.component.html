@@ -1,0 +1,59 @@
+<!-- <p>singleuserapproval works!</p> -->
+<div>
+    <form role="form" (ngSubmit)="update_details()" #f="ngForm" novalidate>
+    <ng-template ngFor let-item [ngForOf]="createRange(links.length)" let-currentIndex="index">
+  <div  *ngIf ="!decision_status">
+    <tr >
+        <!-- <a [routerLink]="['/editor-approval/'+data2[currentIndex]['pr_team_id']+'/'+data2[currentIndex]['title']]" style="color:darkorange;"> -->
+        <td style="padding-right: 10px;" >{{ links[currentIndex]['content_url_id']}}</td>
+        <td style="padding-right: 10px;" >{{ links[currentIndex]['id']}}</td>
+        <td style="padding-right: 10px"><a href="{{ links[currentIndex]['content_url']}}">{{ links[currentIndex]['content_url']}}</a></td>
+        <td>{{ links[currentIndex]['date']}}</td>
+    </tr>
+       <tr> <mat-radio-group [(ngModel)]="model.o_id" name="o_id" required aria-label="Select an option" fxLayoutGap="15px">
+           <td> <mat-radio-button value="1">Accept</mat-radio-button></td>
+           <td> <mat-radio-button value="2">Rework</mat-radio-button></td>
+          </mat-radio-group></tr>
+          <tr><textarea  matInput [(ngModel)]="model.currentid" type="comment" name="currentid" #comm="ngModel"  required id="comment-textarea" class="comnt-sec1"> </textarea>
+                <tr><textarea  matInput [(ngModel)]="model.comment" type="comment" name="comment" #comm="ngModel"  required id="comment-textarea" class="comnt-sec1"> </textarea>
+       
+                           <td><button mat-flat-button class="comnt-sec1" >Send</button></td>
+           
+                </tr> 
+    <!-- </a> -->
+   
+</div>
+   </ng-template>
+</form>
+</div>
+<!-- <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex.lt-md="0%" fxFlex.gt-sm="10%"></div>
+<div fxFlex.lt-md="100%" fxFlex.gt-sm="80%" style="overflow-x:auto;padding:15px;">
+    <table>
+      <tr>
+        <th>S. NO</th>
+        <th>User Name</th>
+        <th>Title</th>
+       
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Smith</td>
+        <td>Extend work from home option to all, restrict work hours: IT employees union</td>
+       
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jackson</td>
+        <td>Extend work from home option to all, restrict work hours: IT employees union</td>
+       
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Johnson</td>
+        <td>Extend work from home option to all, restrict work hours:</td>
+      </tr>
+    </table>
+  </div>
+  <div fxFlex.lt-md="0%" fxFlex.gt-sm="10%"></div>
+</div>  -->

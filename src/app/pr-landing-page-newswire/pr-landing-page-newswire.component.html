@@ -1,0 +1,358 @@
+<div class="layer1">
+  <!-- <div class="container"> -->
+<div style="">
+    <mat-toolbar color="primary">
+      <div class="container">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span style="color:#000;">TRD</span>
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md class="on">
+          <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+          <a href="#" mat-button>Products</a>
+          <a href="#" mat-button>Pricing</a>
+          <a href="#" mat-button>Resources</a>
+          <a href="#" mat-button>Customer Stories</a>
+          <a href="#" mat-button>News Room</a>
+          <!-- <a href="#" mat-button>Menu Item 6</a> -->
+        </div>
+      </mat-toolbar-row></div>
+    </mat-toolbar>
+  
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav fxShow="true" fxHide.gt-sm>
+        <mat-nav-list>
+          <!-- <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a> --><br><br>
+          <a href="#" mat-list-item>Products</a>
+          <a href="#" mat-list-item>Pricing</a>
+          <a href="#" mat-list-item>Resources</a>
+          <a href="#" mat-list-item>Customer Stories</a>
+          <a href="#" mat-list-item>News Room</a>
+          <!-- <a href="#"mat-list-item>Menu Item 6</a> -->
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>
+        <div class="bg-layer">
+        <div class="container">
+          <div class="layer2" fxLayout="row">
+            <div fxFlex.gt-sm="10%" fxShow.gt-sm="true" fxHide></div>
+            <div fxLayout="column" fxLayoutAlign="center center" fxFlex.lt-md="100%" fxFlex.gt-sm="80%">
+              <h1 class="title1 title2" style="color:#fff;"><b>Press Release Distribution Empowering the Earned Media Advantage</b></h1>
+              <p class="title2 title1" style="color:#fff;">#1 in Customer Satisfaction 2019<br>Best in Class - Science, Process and Technology<br>Simple, Flexible, Cost-Effective</p>
+              <p class="title2" style="color:#fff;"><b>Distribute</b> the <b>Right Message</b> to the <b>Right Doctors</b> at the <b>Right Time</b></p>
+              <button mat-raised-button class="title2">Let's get started - Pre Release Distribution</button>
+              <div fxLayout="row">
+                <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" class="sub-footer3">
+                    <div fxFlex.lt-sm="100%" fxFlex.gt-xs="20%" fxLayoutAlign="center center">
+                      <img src="https://storage.googleapis.com/web-assets/footer/new-poweredby-google.png">
+                    </div>
+                    <div fxFlex.lt-sm="100%" fxFlex.gt-xs="20%" fxLayoutAlign="center center">
+                      <img src="https://storage.googleapis.com/web-assets/footer/awars01.png">
+                    </div>
+                    <div fxFlex.lt-sm="100%" fxFlex.gt-xs="20%" fxLayoutAlign="center center">
+                      <img src="https://storage.googleapis.com/web-assets/footer/1000awards.png">
+                    </div>
+                    <div fxFlex.lt-sm="100%" fxFlex.gt-xs="20%" fxLayoutAlign="center center">
+                      <img src="https://storage.googleapis.com/web-assets/footer/SBC_global_logo-L-2.png">
+                    </div>
+                    <div fxFlex.lt-sm="100%" fxFlex.gt-xs="20%" fxLayoutAlign="center center">
+                      <img src="https://storage.googleapis.com/web-assets/footer/startup.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div fxFlex.gt-sm="10%" fxShow.gt-sm="true" fxHide></div>
+            </div>
+        </div>
+      </div>
+      <div class="testimonial">
+          <h3 style="color:#881b91;text-align:center;"><b>Customers Trust Newswire</b></h3>
+        <app-slidertry></app-slidertry>
+      </div>
+      <div class="container">
+          <div class="layer9" fxLayout="column" fxLayoutAlign="center center">
+              <h3 style="color:#881b91;"><b>Newswire’s Press Release & Multimedia</b></h3>
+              <h3>Distribution Software and Services (SaaS)</h3>
+              <!-- <div fxLayout="row" fxLayoutAlign="center center"> -->
+                <img src="/assets/pie2.png">
+              <!-- </div> -->
+            </div>
+            <div class="layer3">
+              <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+                <div fxFlex.lt-md="100%" fxLayoutAlign.lt-md="center center" fxFlex.gt-sm="50%">
+                  <img src="/assets/pie3.png">
+                </div>
+                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout="column" fxLayoutAlign="center start">
+                  <h3>Press Release Distribution</h3>
+                  <h4>Cost-Effective Press Release Distribution with Proven Results</h4>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Send</b> to major media</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Target</b> the right audience</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Impact</b> at the right time</p>
+                  </div>
+                  <p><b><a [routerLink]="['']">Learn and Experience</a></b></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="layer4">
+              <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+                <div fxFlex.lt-md="100%" fxLayoutAlign.lt-md="center center" fxFlex.gt-sm="50%">
+                  <img src="/assets/pie3.png">
+                </div>
+                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout="column" fxLayoutAlign="center start">
+                  <h3 style="color:#fa9051;">Media Database</h3>
+                  <h4>Connect with Key Media for Better Coverage</h4>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Select</b> the right journalists</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Engage</b> in conversations</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Build</b> media relationships</p>
+                  </div>
+                  <p><b><a [routerLink]="['']">Learn and Experience</a></b></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="layer5">
+              <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+                <div fxFlex.lt-md="100%" fxLayoutAlign.lt-md="center center" fxFlex.gt-sm="50%">
+                  <img src="/assets/pie3.png">
+                </div>
+                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout="column" fxLayoutAlign="center start">
+                  <h3 style="color:#f3645f;">Media Watch</h3>
+                  <h4>Monitor Stories and Find Your Critical Mentions</h4>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Monitor </b>Stories and Find Your Critical Mentions
+                      </p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Measure </b>audience sentiment</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Improve </b>performance ROI</p>
+                  </div>
+                  <p><b><a [routerLink]="['']">Learn and Experience</a></b></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="layer6">
+              <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+                <div fxFlex.lt-md="100%" fxLayoutAlign.lt-md="center center" fxFlex.gt-sm="50%">
+                  <img src="/assets/pie3.png">
+                </div>
+                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout="column" fxLayoutAlign="center start">
+                  <h3 style="color:#dd3d71;">Analytics</h3>
+                  <h4>Rich Data Collection to Empower Your Decisions</h4>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Report </b>campaign metrics</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Analyze </b>key channels</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Calculate </b>value in real-time</p>
+                  </div>
+                  <p><b><a [routerLink]="['']">Learn and Experience</a></b></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="layer7">
+              <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+                <div fxFlex.lt-md="100%" fxLayoutAlign.lt-md="center center" fxFlex.gt-sm="50%">
+                  <img src="/assets/pie3.png">
+                </div>
+                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout="column" fxLayoutAlign="center start">
+                  <h3 style="color:#b91e82;">Media Room</h3>
+                  <h4>Showcase Your Company News and Stories via Secure CMS</h4>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Captivate </b>with content</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Share </b>multimedia assets</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Engage </b>with industry audiences</p>
+                  </div>
+                  <p><b><a [routerLink]="['']">Learn and Experience</a></b></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="layer8">
+              <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+                <div fxFlex.lt-md="100%" fxLayoutAlign.lt-md="center center" fxFlex.gt-sm="50%">
+                  <img src="/assets/pie3.png">
+                </div>
+                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout="column" fxLayoutAlign="center start">
+                  <h3 style="color:#881b91;">Customer Success</h3>
+                  <h4>Industry Leading Customer Satisfaction</h4>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Support </b>your efforts</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Gain </b>expert insights</p>
+                  </div>
+                  <div fxLayout="row">
+                    <i class="material-icons">
+                      keyboard_arrow_right
+                      </i><p><b>Leverage </b>industry experience</p>
+                  </div>
+                  <p><b><a [routerLink]="['']">Learn and Experience</a></b></p>
+                </div>
+              </div>
+            </div>
+            <div class="layer11">
+                <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+                    <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout="column" fxLayoutAlign="center start" class="sub-layer11">
+                      <h3 style="color:#dd3d71;">Join the ‘Earned Media Advantage’ Guided Tour (GT)</h3>
+                      <p>Experience the difference with Newswire. Let us show you how to transform your press release into the Earned Media Advantage: <b> greater brand awareness, increase traffic and greater return on media communications spend.</b></p>
+                      <button mat-flat-button>Learn More-Media Advantage</button>
+                    </div>
+                    <div fxFlex.lt-md="100%" fxLayoutAlign.lt-md="center center" fxFlex.gt-sm="50%" fxLayoutAlign.gt-sm="end">
+                      <img src="/assets/pie2.png">
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="layer10" fxLayout="column" fxLayoutAlign="center">
+              <div fxLayout="row" fxLayoutAlign="center">
+                  <h3 style="color:#881b91;padding-bottom: 30px;"><b>Latest Client News Around the Globe</b></h3>
+              </div>
+                <div fxLayout="row wrap" class="events1" fxLayoutAlign="center center" fxLayoutGap="15px grid">
+                <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%" fxFlex.gt-sm="25%" class="single-event" fxLayoutAlign="center center">
+                    <mat-card class="example-card">
+                      <a href= ""><img mat-card-image src="/assets/Amal-Banerjee-large.jpg" alt="" class="img1"></a>
+                      <mat-card-content>
+                        <h5 class="card-title">Dr. Arvind Singh</h5>
+                        <p class="card-text">Post interventional Management of Congenital Heart Disase</p>
+                      </mat-card-content>
+                      <mat-card-actions fxLayout="row">
+                        <button mat-flat-button>Read More</button>
+                      </mat-card-actions>
+                    </mat-card>
+                  </div>
+                  <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%" fxFlex.gt-sm="25%" class="single-event" fxLayoutAlign="center center">
+                      <mat-card class="example-card">
+                        <a href= ""><img mat-card-image src="/assets/Amal-Banerjee-large.jpg" alt="" class="img1"></a>
+                        <mat-card-content>
+                          <h5 class="card-title">Dr. Arvind Singh</h5>
+                          <p class="card-text">Post interventional Management of Congenital Heart Disase</p>
+                        </mat-card-content>
+                        <mat-card-actions fxLayout="row">
+                          <button mat-flat-button>Read More</button>
+                        </mat-card-actions>
+                      </mat-card>
+                    </div>
+                    <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%" fxFlex.gt-sm="25%" class="single-event" fxLayoutAlign="center center">
+                        <mat-card class="example-card">
+                          <a href= ""><img mat-card-image src="/assets/Amal-Banerjee-large.jpg" alt="" class="img1"></a>
+                          <mat-card-content>
+                            <h5 class="card-title">Dr. Arvind Singh</h5>
+                            <p class="card-text">Post interventional Management of Congenital Heart Disase</p>
+                          </mat-card-content>
+                          <mat-card-actions fxLayout="row">
+                            <button mat-flat-button>Read More</button>
+                          </mat-card-actions>
+                        </mat-card>
+                      </div>
+                      <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%" fxFlex.gt-sm="25%" class="single-event" fxLayoutAlign="center center">
+                          <mat-card class="example-card">
+                            <a href= ""><img mat-card-image src="/assets/Amal-Banerjee-large.jpg" alt="" class="img1"></a>
+                            <mat-card-content>
+                              <h5 class="card-title">Dr. Arvind Singh</h5>
+                              <p class="card-text">Post interventional Management of Congenital Heart Disase</p>
+                            </mat-card-content>
+                            <mat-card-actions fxLayout="row">
+                              <button mat-flat-button>Read More</button>
+                            </mat-card-actions>
+                          </mat-card>
+                        </div>
+              </div>
+            </div>
+            </div>
+    <app-pr-footer></app-pr-footer>
+          
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+<!-- </div> -->
+</div>
+
+<!-- <div class="layer2">
+  <div class="container">
+    <div fxLayout="column">
+      <h1>Press Release Distribution Empowering the Earned Media Advantage</h1>
+      <p>#1 in Customer Satisfaction 2019<br>Best in Class - Science, Process and Technology<br>Simple, Flexible, Cost-Effective</p>
+      <p><b>Distribute</b> the <b>Right Message</b> to the <b>Right Doctors</b> at the <b>Right Time</b></p>
+      <button mat-raised-button>Let's get started - Pre Release Distribution</button>
+      <div fxLayout="row">
+        <div fxLayout.lt-md="column" fxLayout.gt-sm="row" class="sub-footer3">
+          <div fxFlex.lt-md="100%" fxFlex.gt-sm="20%" fxLayout="column">
+            <div fxFlex="100%" fxLayoutAlign="center center">
+              <img src="https://storage.googleapis.com/web-assets/footer/new-poweredby-google.png">
+            </div>
+            <div fxFlex="20%" fxLayoutAlign="center center">
+              <img src="https://storage.googleapis.com/web-assets/footer/awars01.png">
+            </div>
+            <div fxFlex="20%" fxLayoutAlign="center center">
+              <img src="https://storage.googleapis.com/web-assets/footer/1000awards.png">
+            </div>
+            <div fxFlex="20%" fxLayoutAlign="center center">
+              <img src="https://storage.googleapis.com/web-assets/footer/SBC_global_logo-L-2.png">
+            </div>
+            <div fxFlex="20%" fxLayoutAlign="center center">
+              <img src="https://storage.googleapis.com/web-assets/footer/startup.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+  

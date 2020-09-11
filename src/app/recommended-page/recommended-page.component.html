@@ -1,0 +1,178 @@
+<app-pr-header></app-pr-header>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myFile").required;
+    }
+</script>
+
+<style>a { color: inherit; } </style>
+<div class="recommended">
+    <div class="container">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <h3>Tailor-made Publishing Packages</h3>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <p>Customize your publishing process based on your publishing goals.</p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" style="margin:20px 0px;">
+            <button mat-flat-button (click)="openDialog()" style="border:1px solid #005082;background-color:#fff;">Customize your publishing plan</button>
+        </div>
+    </div>
+</div>
+
+<div class="promotion">
+    <div class="container">
+        <div fxLayout="row">
+        <!-- <div fxLayout.lt-sm="column" fxLayout.lt-md="row wrap"> -->
+            <div fxFlex.lt-md="0%" fxFlex.gt-sm="5%"></div>
+            <div fxLayout.lt-sm="column" fxLayout.lt-md="row wrap" fxLayout.gt-sm="row" fxFlex.lt-md="100%" fxFlex.gt-sm="90%">
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column1">
+                    <p id="one"></p>
+                    <div class="columnone-one">
+                        <div class="columnone-two">
+                            <p class="title1">BASIC</p>
+                            <p class="title">Our team will design and publish your content which you can share across the world</p>
+                        </div>
+                        <div>
+                            <div fxLayoutAlign="end" class="gst"><h5 class="heading1">+GST</h5></div>
+                            <div><h4 class="price">Rs 1000/-</h4></div>
+                            <!-- <div><h4 class="price">39,000$</h4></div> -->
+                            <!-- <div class="title3">
+                                <h5>NO cost emi starts at
+                                <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" style="text-decoration: underline;">Options</button>
+                                <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                                </mat-menu></h5>
+                            </div> -->
+                            <ul class="list">
+                                <li class="title2">All services in BASIC Package:
+                                </li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish upto 2 videos</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish upto 5 audios and articles</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your articles will be published as a blog</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your audio will be published as a podcast on our platform</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your blogs, articles, podcasts will reach audience on a large scale through our social media platforms: Twitter(33.6K followers), Facebook, Instagram, Flipboard</li> 
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your Content will be published in 7 working days</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Upgrade to a better package to enjoy some more features.</li>
+                            </ul>
+                            <div fxLayoutAlign="center center" class="start-btn"><button mat-flat-button (click)="openRazorpayCheckout(1)">START NOW</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column2">
+                    <p id="two"></p>
+                    <div class="columntwo-one">                        
+                        <div class="columntwo-two">
+                            <p class="title1">PREMIUM</p>
+                            <p class="title">Our team will design and publish your content which you can share across the world.</p>
+                        </div>
+                        <div>
+                            <div fxLayoutAlign="end" class="gst"><h5 class="heading1">+GST</h5></div>
+                            <!-- <div><h4 class="price">39,000$</h4></div> -->
+                            <div><h4 class="price">Rs 5000/-</h4></div>
+                            <!-- <div class="title3">
+                                <h5>NO cost emi starts at
+                                <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" style="text-decoration: underline;">Options</button>
+                                <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                                </mat-menu></h5>
+                            </div> -->
+                            <ul class="list">
+                                <li class="title2">All services in PREMIUM package:
+                                </li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish upto 5 videos</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish upto 10 audios,images and articles</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your articles will be published as a blog</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your audio will be published as a podcast on our platform and on other well known podcast directories like Spotify, Soundcloud, Apple podcasts, Google podcasts, Stitcher</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your blogs, articles, podcasts will reach audience on a large scale through our social media platforms: Twitter(33.6K followers), Facebook, Instagram, Flipboard</li> 
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your Content will be published in 3 working days</li>
+                            </ul>
+                            <div fxLayoutAlign="center center" class="start-btn"><button mat-flat-button  (click)="openRazorpayCheckout(2)">START NOW</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column3">
+                    <p id="three"></p>
+                    <div class="columntwo-one">                        
+                        <div class="columnthree-two">
+                            <p class="title1">PRO</p>
+                            <p class="title">Our team will design and publish your content which you can share across the world.</p>
+                        </div>
+                        <div>
+                            <div fxLayoutAlign="end" class="gst"><h5 class="heading1">+GST</h5></div>
+                            <!-- <div><h4 class="price">39,000$</h4></div> -->
+                            <div><h4 class="price">Rs 8000/-</h4></div>
+                            <!-- <div class="title3">
+                                <h5>NO cost emi starts at
+                                <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" style="text-decoration: underline;">Options</button>
+                                <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                                </mat-menu></h5>
+                            </div> -->
+                            <ul class="list">
+                                <li class="title2">All services in PRO Package:
+                                </li>
+                            
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish upto 50 videos, audios and articles</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish upto 10 images</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your articles will be published as a blog</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your audio/video will be published as a video on our Youtube with amazing GFX just like in news channels</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your audio will be published as a podcast on our platform and on other well known podcast directories like Spotify, Soundcloud, Apple podcasts, Google podcasts, Stitcher</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your blogs, articles, podcasts will reach audience on a large scale through our social media platforms: Twitter(33.6K followers), Facebook, Instagram, Flipboard</li> 
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your Content will be published in 24 hours</li>
+                            </ul>
+                            <div fxLayoutAlign="center center" class="start-btn"><button mat-flat-button  (click)="openRazorpayCheckout(3)">START NOW</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column4">
+                    <p id="four"></p>
+                    <div class="columnfour-one">
+                        <div class="columnfour-two">
+                            <p class="title1">EXPRESS</p>
+                        <p class="title">Our team will design and publish your content which you can share across the world.</p>
+                     </div>
+                     <div>
+                        <div fxLayoutAlign="end" class="gst"><h5 class="heading1">+GST</h5></div>
+                        <!-- <div><h4 class="price">UNLIMITED</h4></div> -->
+                        <div><h4 class="price">Rs 12,000/-</h4></div>
+                        <!-- <div class="title3">
+                            <h5>NO cost emi starts at
+                            <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" style="text-decoration: underline;">Options</button>
+                            <mat-menu #menu="matMenu">
+                            <button mat-menu-item>Item 1</button>
+                            <button mat-menu-item>Item 2</button>
+                            </mat-menu></h5>
+                        </div> -->
+                        <ul class="list">
+                            <li class="title2">All services in EXPRESS package:
+                            </li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish unlimited videos, audios and articles</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish unlimited images</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your articles will be published as a blog</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your audio, video will be published as a video on our Youtube with amazing GFX just like in news channels</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your audio will be published as a podcast on our platform and on other well known podcast directories like Spotify, Soundcloud, Apple podcasts, Google podcasts, Stitcher</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your blogs/articles/podcasts will reach audience on a large scale through our social media platforms: Twitter(33.6K followers), Facebook, Instagram, Flipboard</li> 
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Your Content will be published in 3 hours</li>
+                          
+                        </ul>
+                        <div fxLayoutAlign="center center" class="start-btn"><button mat-flat-button  (click)="openRazorpayCheckout(4)">START NOW</button></div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+            <div fxFlex.lt-md="0%" fxFlex.gt-sm="5%"></div>
+        </div>
+    </div>
+<div class="recommended">
+    <div class="container">
+        <div fxLayout="row">
+            <!-- <h3>Tailor-made Publishing Packages</h3> -->
+        </div>
+    </div>
+</div>
+</div>

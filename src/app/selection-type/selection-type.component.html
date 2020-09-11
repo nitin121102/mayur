@@ -1,0 +1,54 @@
+
+<header class="header">
+    <div class="container">
+        <div fxLayout="row" >
+            <div fxFlex="20"  fxFlex.lt-md="50">
+                <!-- <img src="/assets/r-logo.jpg" style="width:30px"/><span style="font-size:22px;">Publishers</span> -->
+                <span style="font-size:22px;color:#005082;">KnowledgeNetwork</span>
+            </div>
+            <div fxFlex="80" fxFlex.lt-md="50">
+
+            </div>
+        </div>
+    </div>
+</header>
+<!--jdskfd-->
+<div  class="banner">
+    <div class="container">
+        <div fxLayout="row" fxLayout.lt-md="column">
+            <div fxFlex="20"></div>
+            <div fxFlex="60" align="center">
+                <h2>What kind of Researcher are you?</h2>
+                <p>Plese select a category</p>
+                <div fxLayout="row" fxLayout.lt-md="column">
+
+                    <div fxFlex="" >
+                        <a [routerLink]="['/register/Individual']">
+                            <div class="icon-section"><i class="fa fa-user" aria-hidden="true"></i></div>
+                            <p>Individual</p>
+                            <p style="font-size:14px !important;color: black !important;">If you are an Institute member, Faculty and independent researchers</p>
+                        </a>
+                    </div>
+
+                   <div fxFlex="" >
+                        <a [routerLink]="['/register/Organization']">
+                            <div class="icon-section"> <i class="fa fa-building-o" aria-hidden="true"></i></div>
+                            <p>Organization</p>
+                            <p style="font-size:14px !important;color: black !important;">If you are representing a medical, govt, or private organizations and hospitals</p>
+                        </a>
+                    </div>
+
+                    <div fxFlex=""  >
+                        <a [routerLink]="['/register/Agency']">
+                            <div class="icon-section">  <i class="fa fa-sitemap" aria-hidden="true"></i></div>
+                            <p>Agency</p>
+                            <p style="font-size:14px !important;color: black !important;">If you are representing a Press Release agency</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="20"></div>
+        </div>
+    </div>
+</div>
+

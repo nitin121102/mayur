@@ -1,0 +1,28 @@
+<div class="container pad-top">
+    <div fxLayout="row" fxLayout.lt-md="column">
+          <div fxFlex="30"></div>
+           <div fxFlex="40">
+               <mat-card class="login-box">
+                    <h2>HR <span style="color:#FF5722">Login</span></h2>
+                   <mat-tab-group>
+                       <mat-tab label="Login as Journalist">
+                           <form name="form" (ngSubmit) = "login()" id="loginform" novalidate #f = "ngForm" class="example-form" class="login-form-top">
+                               <mat-form-field class="example-full-width">
+                                   <input matInput type="username" name="username" placeholder="Email " [(ngModel)]="this.user_id" #email="ngModel" required autofocus id="username">
+                               </mat-form-field>
+                               <mat-form-field class="example-full-width">
+                                   <input matInput type="password" name="password" placeholder="Password " placeholder="password" [(ngModel)]="this.password" #email="ngModel" required autofocus id="password">
+                               </mat-form-field>
+                               <br/>
+                             <button color="primary" type="submit" id="submit" mat-flat-button class="btn-theme"> Submit</button>
+                             <!-- <p style="text-align:center;margin-top:10px;">Dont Have an Account ? <span>
+                                    <a [routerLink]="['/register']" style="text-decoration: underline;padding-left:10px;">Register</a></span>
+                                    </p> -->
+                           </form>
+                       </mat-tab>
+                   </mat-tab-group>
+               </mat-card>
+           </div>
+          <div fxFlex="30"></div>
+    </div>
+    </div>

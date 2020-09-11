@@ -1,0 +1,183 @@
+<!-- <p>singleuserapproval works!</p> -->
+
+<!-- <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex.lt-md="0%" fxFlex.gt-sm="10%"></div>
+<div fxFlex.lt-md="100%" fxFlex.gt-sm="80%" style="overflow-x:auto;padding:15px;">
+    <table>
+      <tr>
+        <th>S. NO</th>
+        <th>User Name</th>
+        <th>Title</th>
+       
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Smith</td>
+        <td>Extend work from home option to all, restrict work hours: IT employees union</td>
+       
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jackson</td>
+        <td>Extend work from home option to all, restrict work hours: IT employees union</td>
+       
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Johnson</td>
+        <td>Extend work from home option to all, restrict work hours:</td>
+      </tr>
+    </table>
+  </div>
+  <div fxFlex.lt-md="0%" fxFlex.gt-sm="10%"></div>
+</div>  -->
+<div class="details">
+    <div class="container">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div fxFlex.lt-md="100%"  fxFlex.gt-sm="60%">   
+                <div *ngFor="let data2 of links">   
+                <div fxLayout="column">
+                    <h4>Heading</h4>
+                    <mat-card>     
+                        <div fxLayout="column">
+                            <ul fxLayout="column">
+                                <li>
+                                    <p class="head">Name</p>
+                                    <p class="para">{{ data2['username']}} {{ data2['lastname']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Address</p>
+                                    <p class="para">{{ data2['address']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Age</p>
+                                    <p class="para">{{ data2['age']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Applicant Id</p>
+                                    <p class="para">{{ data2['medico_id']}}</p>
+                                </li>
+                                <!-- <li>
+                                    <p class="head">Audio Uploaded</p>
+                                    <p class="para"></p>
+                                </li> -->
+                                
+                                <li>
+                                    <p class="head">College</p>
+                                    <p class="para">{{ data2['college']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Degree</p>
+                                    <p class="para">{{ data2['education_level']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Year</p>
+                                    <p class="para">{{ data2['current_year']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Country</p>
+                                    <p class="para">{{ data2['country']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">City</p>
+                                    <p class="para">{{ data2['city']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">State</p>
+                                    <p class="para">{{ data2['state']}}</p>
+                                </li>
+                                <!-- <li>
+                                    <p class="head">Country code</p>
+                                    <p class="para"></p>
+                                </li> -->
+                                <!-- <li>
+                                    <p class="head">Current year</p>
+                                    <p class="para"></p>
+                                </li> -->
+                                <!-- <li>
+                                    <p class="head">Education level</p>
+                                    <p class="para"></p>
+                                </li> -->
+                                <li>
+                                    <p class="head">Email</p>
+                                    <p class="para">{{ data2['email']}}</p>
+                                </li>
+                            
+                                
+                                <li>
+                                    <p class="head">Facebook</p>
+                                    <p class="para">{{ data2['facebook']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">LinkedIn</p>
+                                    <p class="para">{{ data2['linkedin']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Other Social media links</p>
+                                    <p class="para">{{ data2['social']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Fluent language</p>
+                                    <p class="para">{{ data2['fluent_language']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">language1</p>
+                                    <p class="para">{{ data2['language1']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Gender</p>
+                                    <p class="para">{{ data2['gender']}}</p>
+                                </li>
+                              
+                                <li>
+                                    <p class="head">Message to recruiter</p>
+                                    <p class="para">{{ data2['message']}}</p>
+                                </li>
+                                <li>
+                                    <p class="head">Mobile</p>
+                                    <p class="para">{{ data2['mobile']}}</p>
+                                </li>
+                            
+                               
+                              
+                                <li>
+                                    <p class="head">Application Date</p>
+                                    <p class="para">{{ data2['mobile']}}</p>
+                                </li>
+                            
+                                <li>
+                                    <p class="head">Working hours</p>
+                                    <p class="para">{{ data2['working_hours']}}</p>
+                                </li> 
+                            </ul>
+                          </div> 
+                    </mat-card> 
+                    <div fxLayout="column">
+                        <form role="form" (ngSubmit)="update_details()" #f="ngForm" novalidate>
+                        <!-- <ng-template ngFor let-item [ngForOf]="createRange(links.length)" let-currentIndex="index"> -->
+                      <!-- <div  *ngIf ="!decision_status"> -->
+                       
+                           <tr> <mat-radio-group [(ngModel)]="model.student_journalist_verified" name="student_journalist_verified" required aria-label="Select an option" fxLayoutGap="15px">
+                               <td> <mat-radio-button value="1">Accept</mat-radio-button></td>
+                               <td> <mat-radio-button value="2">Reject</mat-radio-button></td>
+                              </mat-radio-group></tr>
+                              <!-- <tr><textarea  matInput [(ngModel)]="model.currentid" type="comment" name="currentid" #comm="ngModel"  required id="comment-textarea" class="comnt-sec1"> </textarea> -->
+                                    <!-- <tr><textarea  matInput [(ngModel)]="model.comment" type="comment" name="comment" #comm="ngModel"  required id="comment-textarea" class="comnt-sec1"> </textarea> -->
+                           
+                                               <button mat-flat-button class="comnt-sec1" (click)="update_details()" >Send</button>
+                               
+                                    <!-- </tr>  -->
+                        <!-- </a> -->
+                       
+                    <!-- </div> -->
+                       <!-- </ng-template> -->
+                    </form>
+                    </div>
+                </div> 
+                </div>
+            </div> 
+         </div>  
+    </div>  
+</div>
+<div>
+  

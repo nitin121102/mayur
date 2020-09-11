@@ -1,0 +1,33 @@
+<div class="background-home">
+
+    <div class="container" >
+    
+            <div align="center">
+                <img src="/assets/trd-logo.png"/>
+            </div>
+                <h4 class="text-center mrg_btm2">Welcome to the PR</h4>
+                <p class="mrg_btm text-center">Who are you ?</p>
+                <br>
+                <br>
+        <div class="row">
+            <div class="col-md-7 ">
+                <div class="dash-way" *ngIf="!login">
+                <a [routerLink]="['/login']"><div id="pr-journalist5" class="dashboard_box"><h4>Journalist</h4></div></a>
+                </div>
+                <div class="dash-way" *ngIf="login">
+                        <a [routerLink]="['/Upload']"><div id="pr-journalist2" class="dashboard_box"><h4>Journalist</h4></div></a>
+                        </div>
+            </div>
+    
+            <div class="col-md-2 ">
+                <div class="dash-way">
+                    <a [routerLink]="['/pr-journalist-login']"><div class="dashboard_box"><h4> Editor </h4></div></a></div>
+            </div>
+            <div class="col-md-6 ">
+                <!-- <div class="dash-way">
+                    <a [routerLink]="['/brand-ambassador-program']"><div class="dashboard_box"><h4>Campus Ambassador </h4></div></a><
+                </div> -->
+            </div>
+    </div>
+    </div>
+    </div>

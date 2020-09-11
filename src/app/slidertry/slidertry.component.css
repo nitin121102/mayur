@@ -1,0 +1,25 @@
+
+
+  ::ng-deep owl-carousel-o .owl-carousel .owl-nav .owl-prev,::ng-deep owl-carousel-o .owl-carousel .owl-nav .owl-next{
+      /* background-color: #fff; */
+      background-color: #f1f1f1;
+  }
+  ::ng-deep owl-carousel-o .owl-carousel .owl-nav .owl-prev:hover,::ng-deep owl-carousel-o .owl-carousel .owl-nav .owl-next:hover{
+    background-color: #fff;
+    /* background-color: #f1f1f1; */
+}
+  .carousel-pad{
+      padding:16px;
+  }
+  owl-carousel-o img{
+  padding: 16px;
+  border: 1px solid #dedede;
+  }
+  h6{
+      margin:16px 0px 0px 0px;
+  }
+  .box-shadow{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    margin: 20px;
+    background-color: #fff;
+  }

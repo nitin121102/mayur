@@ -1,0 +1,124 @@
+
+
+<app-brand-header></app-brand-header>
+
+<button *ngIf="!edit" (click)="edit2()" > Edit</button>
+<button *ngIf="edit" (click)="edit2()"> Back </button>
+
+
+<a [routerLink]="['/user_upload']"><button> Upload Page --></button></a>
+
+
+
+
+
+<div class="container margin-top-40">
+
+    <div fxLayout="column" class="mat-points example-form" style="padding:10px;">
+        <h2 class="ben-heading">Profile</h2>
+        <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+            <div fxFlex="">
+                <p>
+                    <mat-form-field appearance="outline" class="example-full-width">
+                        <mat-label>First Name</mat-label>
+                        <input matInput [(ngModel)]="user['f_name']"  name="f_name"  #f_name="ngModel" id="f_name" placeholder="First Name" required>
+                        <mat-error *ngIf="f_name.invalid">
+                            First Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div fxFlex="">
+                <p>
+                    <mat-form-field appearance="outline" class="example-full-width">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput [(ngModel)]="user['l_name']"  name="f_name"  #f_name="ngModel" id="l_name" placeholder="Last Name" required>
+
+                    </mat-form-field>
+                </p>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+            <div fxFlex="">
+                <p>
+                    <mat-form-field appearance="outline" class="example-full-width">
+                        <mat-label>College</mat-label>
+                        <input matInput [(ngModel)]="user['college']"  name="f_name"  #f_name="ngModel"  id="college" placeholder="College" required>
+
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div fxFlex="">
+                <p>
+                    <mat-form-field appearance="outline" class="example-full-width">
+                        <mat-label>Gender </mat-label>
+                        <input matInput [(ngModel)]="user['gender']"  name="f_name"  #f_name="ngModel" id="gender" placeholder="First Name" required>
+                        <mat-error *ngIf="f_name.invalid">
+                            First Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+            <div fxFlex="">
+                <p>
+                    <mat-form-field appearance="outline" class="example-full-width">
+                        <mat-label>Email ID</mat-label>
+                        <input matInput [(ngModel)]="user['email_id']"  name="f_name"  #f_name="ngModel" id="email" placeholder="Email ID" required>
+                        <mat-error *ngIf="f_name.invalid">
+                            First Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div fxFlex="">
+                <p>
+                    <mat-form-field appearance="outline" class="example-full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput [(ngModel)]="user['login_password']"  name="f_name"  #f_name="ngModel" placeholder="Password" required>
+                        <mat-error *ngIf="f_name.invalid">
+                            First Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="15px" fxLayout.lt-md="column" fxLayoutGap.lt-md="5px">
+            <div fxFlex="">
+                <p>
+                    <mat-form-field appearance="outline" id="u"  class="example-full-width">
+                        <mat-label>{{user['state']}}</mat-label>
+                        <mat-select placeholder="select state"  (selectionChange)="onSelectstate(state.value)" name="state"
+                                    [(ngModel)]="user['state']" #state="ngModel">
+                            <mat-option value="select state">select state</mat-option>
+                            <mat-option *ngFor="let state of all_states" [value]="state.state_id">{{state.state_name}}</mat-option >
+                        </mat-select>
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div fxFlex="">
+                <p>
+                    <mat-form-field appearance="outline" id="city" class="example-full-width">
+                        <mat-label>{{user['city']}}</mat-label>
+                        <mat-select  [(ngModel)]="user['city']" (selectionChange)="onSelectcity(city.value)" name="city" #city="ngModel" >
+<!--                            <mat-option value="select city">select city</mat-option>-->
+                            <mat-option *ngFor="let city of all_cities" [value]="city.city_id">{{city.city_name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </p>
+            </div>
+
+        </div>
+
+        <div fxLayout="row">
+            <button mat-flat-button color="primary"  id="submit" (click)="onSubmit()">Update</button>
+        </div>
+
+    </div>
+</div>
+

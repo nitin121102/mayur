@@ -1,0 +1,147 @@
+
+    <style>
+        .vid_side_box_inner {
+            padding: 0 0 5px 0 !important;
+            margin: 5px 0 0 !important;
+            border-bottom: 1px solid #eee;
+        }
+        .hd5 {
+            line-height: 25px;
+        }
+        @media (max-width: 767px) {
+            .hd5 {
+                line-height: 20px;
+                font-size: 12.5px !important;
+            }
+        }
+        span.c {
+            display: block;
+            width: auto;
+            height: auto;
+            padding: 5px;
+            border: 1px solid black; 
+        }
+    </style>
+    
+    
+    <!-- <br><br>
+    <h2 align="center">Posts</h2>
+    <div fxLayoutAlign="center">
+    <div *ngFor="let post of content_details" > 
+         <div *ngIf="post.status_form != 0"> -->
+            <!-- <span class="c">
+            <h4 id="title">Title:</h4>{{post.title}}<br>
+            <h4 id="desc">Description:</h4>{{post.description}}<br>
+            
+            <h4>Uploads:</h4>
+          -->
+            <!-- <div *ngIf="f_urls[post.content_url_id]">
+            <div *ngFor="let i of createRange(f_urls[post.content_url_id].length)">
+            <button id="download" >{{f_names[post.content_url_id][i]}}</button>
+            </div></div> -->
+            <!-- </span><br><br><br> -->
+        <!-- </div> -->
+    <!-- </div> -->
+<!-- </div> -->
+    <!-- <div>
+        <ng-template ngFor let-item [ngForOf]="createRange(limit)" let-currentIndex="index">
+      
+        <tr >
+            <a [routerLink]="['/editor-approval/'+data2[currentIndex]['pr_team_id']+'/'+data2[currentIndex]['title']]" style="color:darkorange;">
+            <td>{{ data2[currentIndex]['pr_team_id']}}</td>
+            <td>{{ data2[currentIndex]['username']}}</td>
+            <td>{{ data2[currentIndex]['title']}}</td>
+        </a>
+       </tr>
+      
+       </ng-template>
+    </div> -->
+    <!-- <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex.lt-md="0%" fxFlex.gt-sm="10%"></div>
+    <div fxFlex.lt-md="100%" fxFlex.gt-sm="80%" style="overflow-x:auto;padding:15px;">
+        
+        <table>
+           <tr>
+            <th>Knowledge ID</th>
+            <th>User Name</th>
+            <th>Title</th>
+           
+          </tr> 
+          <ng-template ngFor let-item [ngForOf]="createRange(limit)" let-currentIndex="index">
+         <tr><a [routerLink]="['/editor-approval/'+data2[currentIndex]['pr_team_id']+'/'+data2[currentIndex]['title']]" style="color:darkorange;">
+            
+            <td>{{ data2[currentIndex]['pr_team_id']}}</td>
+            <td>{{ data2[currentIndex]['username']}}</td>
+            <td>{{ data2[currentIndex]['title']}}</td>
+        </a></tr> -->
+          <!-- <tr>
+            <td>1</td>
+            <td>Smith</td>
+            <td>Extend work from home option to all, restrict work hours: IT employees union</td>
+           
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jackson</td>
+            <td>Extend work from home option to all, restrict work hours: IT employees union</td>
+           
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Johnson</td>
+            <td>Extend work from home option to all, restrict work hours:</td>
+          </tr> -->
+        <!-- </ng-template>
+        </table>
+         -->
+         <p>Please note that the<b>latest content</b> submitted are <b>towards the end</b></p>
+<p>***NOTE: Please address the content in the following priority:</p>
+<p>1. Express-should be published in<b> 3-4 hours</b> time</p>
+<p>2. Pro - should be published in <b>24 hours</b> </p>
+<p>3. Premium- should be published in <b>3 days</b></p>
+<p>4. Basic- should be published in <b>7 days</b> </p>
+        <div class="layer"><table border="1">
+
+            <thead>
+                <tr>
+                    <th>Medico ID</th>
+                    <th>Username</th>
+                    <!-- <th>Video Headline</th>
+                    <th>Video Sub Headline</th> -->
+                    <th>College</th>
+                    <th>Degree</th>
+                    <!-- <th>Version</th>
+                    <th>Verified By</th>
+                    <th>Added By</th>
+                    <th>Editor Name</th>
+                    <th>Edited Date</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <ng-template> -->
+                <tr *ngFor = "let data2 of data2">
+                    
+                    <td a [routerLink]="['/editor-approval/'+data2['pr_team_id']+'/'+data2['title']]" style="color:darkorange;">{{ data2['medico_id']}}</td>
+                    <!-- <td id="new_td">
+                            <div >
+                            <h5 class="video-head">{{e['video_headline']}}</h5>
+                            <p class="vi-dr-name">{{e['video_sub_headline']}}</p>
+                            </div>
+                        </div> </a></td> -->
+                    <!-- <td>{{e['video_headline']}}</td>
+                    <td>{{e['video_sub_headline']}}</td> -->
+                    <td a [routerLink]="['/studentslist/'+data2['medico_id']+'/'+data2['college']]" style="color:darkorange;">{{ data2['username']}} {{ data2['lastname']}}</td>
+                    <td a [routerLink]="['/studentslist/'+data2['medico_id']+'/'+data2['college']]" style="color:darkorange;">{{ data2['college']}}</td>
+                    <td a [routerLink]="['/studentslist/'+data2['medico_id']+'/'+data2['college']]" style="color:darkorange;">{{ data2['education_level']}}</td>
+                    <!-- <td>{{e['username_verified_by']}}</td>
+                    <td>{{e['username_added_by']}}</td>
+                    <td>{{e['editor_name']}}</td>
+                    <td>{{e['edited_date']}}</td> -->
+        
+                </tr>
+            <!-- </ng-template> -->
+        
+            </tbody>
+        
+        </table>
+        </div>

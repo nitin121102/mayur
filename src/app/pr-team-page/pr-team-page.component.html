@@ -1,0 +1,154 @@
+<app-pr-header></app-pr-header>
+<script>
+        function myFunction() {
+          var x = document.getElementById("myFile").required;
+        }
+</script>
+
+<style>a { color: inherit; } </style>
+
+<div class="banner-upload-space" >
+     <div class="container">
+           <div fxLayout="row">
+            <div fxFlex.lt-sm="0%" fxFlex.gt-xs="20"></div>
+            <div fxFlex.lt-sm="100%" fxFlex.gt-xs="60%">
+                   <mat-card class="mat-form">
+                       <h2>Publisher Form</h2>               
+                       <form class="example-form" #ff="ngForm" novalidate>
+                               <mat-form-field class="example-full-width">
+                                   <input matInput placeholder="Title"  name="title1" [(ngModel)]="model.title" #title="ngModel" required>
+                               </mat-form-field>
+                               <mat-form-field class="example-full-width">
+                                   <textarea maxlength="5000" matInput placeholder="Description" name="description1" [(ngModel)]="model.description" #description="ngModel" required></textarea>
+                               </mat-form-field>
+                               <p >You have {{ 5000-model.description.length }} characters left</p><br>
+                           <div fxLayout="row" fxLayoutGap="15px">
+                               <!-- <div fxFlex="">
+                                   <mat-form-field class="special-class">
+                                       <mat-label>Authority</mat-label>
+                                       <input matInput type="text" readonly name ="authority" value="" id="authority" placeholder="Authority" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model.authority" #authority="ngModel" >
+                                   </mat-form-field>
+                               </div> -->
+                               <!-- <div fxFlex="">
+                                   <mat-form-field class="example-full-width" >
+                                       <mat-label>Type of Content</mat-label>
+                                       <mat-select  id="type"  name="type" [(ngModel)]="model.type" placeholder="Content Type" >
+                                           <mat-option  value="audio" (click)="toggle1()" >
+                                               Audio
+                                           </mat-option>
+                                           <mat-option  value="video" (click)="toggle2()">
+                                               Video
+                                           </mat-option>
+                                           <mat-option  value="image" (click)="toggle3()">
+                                               Image
+                                           </mat-option>
+                                           <mat-option  value="presentation" (click)="toggle4()">
+                                               Presentation
+                                           </mat-option>
+                                       </mat-select>
+                                   </mat-form-field>
+                               </div> -->
+                           </div>
+
+                           <p><b>Upload an Image</b></p>
+                           <input multiple type="file" ng-file-model="files" id="myImage" (change)="selectFile($event)" accept="image/*" required><br><br>
+                           <p><b>Upload an Audio</b></p>
+                           <input multiple type="file" ng-file-model="files" id="myAudio" (change)="selectFile($event)" accept="audio/*" required><br><br>
+                           <p><b>Upload a Video</b></p>
+                           <input multiple type="file" ng-file-model="files" id="myVideo" (change)="selectFile($event)" accept="video/*" required><br><br>
+                           <p><b>Upload a article</b></p>
+                           <input multiple type="file" ng-file-model="files" id="myPDF" (change)="selectFile($event)" accept="application/pdf,application/msword,text/plain,.docx,.doc" required><br><br>
+                           <!-- <p><b>Upload DOCX</b></p>
+                           <input multiple type="file" ng-file-model="files" id="myDOCX" (change)="selectFile($event)" accept="application/docx" required><br><br> -->
+
+                           
+                           <ul>
+                               
+                               <div *ngFor="let index of range">
+                            <li *ngIf="names[index]!=0">
+                                {{names[index]}}&nbsp;
+                                <button *ngIf="is_uploaded[index]" (click)="deleteFile(index)">Delete</button>
+                                <button *ngIf="!is_uploaded[index]">Uploading</button>
+                            </li>
+                        </div>
+                    </ul>
+
+                           <!-- <div class="vs__details__actions">
+                            <button class="vs__button"  (click)="validateFile()"> 
+                            Add 
+                            </button>
+                          </div> -->
+
+                           <p class="where">Date captured:</p>
+                           <mat-form-field class="example-full-width">
+                               <input readonly matInput name="date" [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="model.date" required>
+                               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                               <mat-datepicker #picker ></mat-datepicker>
+                           </mat-form-field>
+
+                            <p class="where">Where captured:</p>
+                            <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="15px">
+                                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+
+                                  <mat-form-field class="example-full-width">
+                                      <mat-select placeholder="Select country" (selectionChange)="onSelect(country.value)" name="country" [(ngModel)]="model.country" #country="ngModel" id="country" required>
+                                       <!-- <mat-option value="Select country" disabled selected >Select country</mat-option> -->
+                                       <mat-option [value]="model.country">{{model.country}}</mat-option>
+
+                                          <mat-option *ngFor="let country of all_countries" [value]="country.country_id">{{country.country_name}}</mat-option>
+                                      </mat-select>
+                                  </mat-form-field><br>
+
+                              </div>
+                              <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+
+                                  <mat-form-field class="example-full-width">
+                                      <mat-select placeholder="Select state"  (selectionChange)="onSelectstate(state.value)" name="state" [(ngModel)]="model.state" #state="ngModel" id="state" required>
+                                          <!-- <mat-option value="Select state" disabled selected >Select state</mat-option> -->
+                                          
+                                         <mat-option [value]="model.state">{{model.state}}</mat-option>
+                                          <mat-option *ngFor="let state of all_states" [value]="state.state_id">{{state.state_name}}</mat-option >
+                                      </mat-select>
+                                  </mat-form-field><br>
+
+                              </div>
+                            </div>
+                            <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="15px">
+                                    <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                                      <mat-form-field class="example-full-width">
+                                          <input name="postal_code" matInput placeholder="ZIP/Postal code" [(ngModel)]="model.postal_code" #postal_code="ngModel" required>
+                                      </mat-form-field>
+                                  </div>
+                                  <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                                      <mat-form-field class="example-full-width">
+                                          <mat-select id="city" placeholder="select city" [(ngModel)]="model.city"  (selectionChange)="onSelectcity(city.value)" name="city" #city="ngModel" required>
+                                              <!-- <mat-option value="select city" disabled selected >Select city</mat-option> -->
+                                              <mat-option [value]="model.city">{{model.city}}</mat-option>
+                                              <mat-option *ngFor="let city of all_cities" [value]="city.city_id">{{city.city_name}}</mat-option>
+                                          </mat-select>
+                                      </mat-form-field>
+                                  </div>
+                                </div>
+                                <div fxLayout="row">
+                                    <mat-checkbox [value]="Checked" (click)="changeValue(Checked)" ><p style="margin: 0px;white-space: normal;line-height: 1;">Yes, I have read and agree to <a href="#"  style="color:#FF0000;">terms</a> of use.</p></mat-checkbox>
+                                </div>
+                                <!-- <mat-checkbox id="terms" [value]="Checked" (click)="changeValue(Checked)" >Yes, I have read and agree to <a href="#"  style="color:#FF0000;">terms</a> of use.</mat-checkbox> -->
+
+                            <div *ngIf="selection && !uploaded && selectedFiles.length!=0">Please wait,your file is uploading.</div> 
+
+                            <div class="btn-row">
+                               <button mat-raised-button id="submit" color="primary" [disabled]="!(ff.form.valid && Checked && uploaded && something_is_uploaded)" (click)="post()">Submit</button>
+
+                           </div>
+
+                       </form>
+                   </mat-card>
+               </div>
+               <div fxFlex.lt-sm="0%" fxFlex.gt-xs="20%"></div>
+           </div>
+     </div>
+</div>
+
+
+
+

@@ -1,0 +1,201 @@
+.screenint1-desk,.screenint1-mob{
+    /* background-color: #005082; */
+    /* background-color: #126773; */
+    background-color: #24305e;
+    width:100%;
+}
+.screenint1-desk .screen1bg{
+    color: #005082;
+    background-color: #fff;    
+    padding:10px;
+    margin-right: 10px;
+}
+.screenint1-mob .screen1bgtwo,.screenint1-mob .screen1bgthree{
+    color: #fff;    
+    padding:10px;
+    text-align: center !important;
+    width: 100%;
+    font-weight: bold;
+    margin: 0px;
+}
+.screenint1-mob .screen1bgtwo{
+    font-size: 28px;
+}
+.screen1{
+    margin:30px 0px;
+}
+.screen3 .mat-card h4{
+    font-size: 22px !important;
+}
+.screenint1-desk .screen1bgtwo{
+    padding: 15px;
+    color:#005082;
+    background-color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+}
+.screenint1-desk .screen1bgthree{
+    color:#fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+.screen9 .padd-left p{
+    margin: 0px;
+}
+.screen9 .padd-left{
+    padding-left: 10px;
+}
+.screen1bgthree h6{
+    text-align: center;
+}
+.screen1bgfour{
+    margin-right: 10px;
+    margin-bottom: -20px;
+}
+.screen2 button img{
+    width:24px;
+    height:24px;
+}
+.screen2 button i{
+    font-size: 24px;
+}
+.photoformat{
+    padding: 20px;
+    height:100%;
+}
+.photoformat mat-card{
+    height: 100%;
+}
+.screen3 h4,.screen3 h6,.photoformat h5{
+    text-align: center;
+}
+.photoformat h4,.photoformat h5,.screen3 h5,.screen4 h5,.screen5 h5,.screen6 h5,.screen7 h5,.screen8 h5{
+    color:#005082;
+}
+.screen2,.screen3,.screen4,.screen5,.screen6,.screen7,.screen8{
+    margin-bottom:50px;
+}
+@media(max-width:600px){
+    .screen3{
+        margin-bottom: 10px;
+    }
+}
+.screen5 h5,.screen6 h5,.screen7 h5,.screen8 h5,.screen9 h5,.screen10 h5{
+    margin-bottom: 30px;
+}
+.screen10 h5{
+    font-size: 18px !important;
+}
+.mat-tab-group{
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    padding: 0px 20px 20px 20px;
+    width:100%;
+}
+::ng-deep .mat-tab-group .mat-tab-body-wrapper{
+    padding: 15px 0px 0px 0px;
+}
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+.screen9 .inputs input,.screen9 .inputs select{
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.screen9 label{
+    margin-bottom: 5px;
+}
+.screen9 .inputs{
+    background-color: #ecedee;
+    padding: 10px;
+}
+.screen9{
+    background-color: #ecedee;
+    padding: 20px 0px;
+}
+.date{
+    margin:0px;
+}
+.heading5{
+    font-size: 26px;
+    color:#005082;
+}
+.mat-tab-group{
+    background-color: #f1f1f1;
+}
+.screen9{
+    margin-bottom: 50px;
+}
+.head4{
+    text-align: left !important;
+}
+@media(max-width:959px){
+    .screen1{
+        padding-top: 50px;
+    }
+    .screen3 .head4,.screen10 h4,.screen5 h4{
+        padding-bottom: 20px;
+        padding-top: 20px;
+        margin-bottom: 0px;
+        color:#005082;
+        font-size: 22px !important;
+        font-weight: bold;
+    }
+    .screen3 .head4{
+        padding-top: 20px;
+    }
+    .desk-socm,.screenint1-desk{
+        display: none !important;
+    }
+}
+.background5 .heading5 a:hover,.background3 .heading2 a:hover,.background4 .heading2 a:hover,.background5 .heading2 a:hover,.background6 .heading5 a:hover,.footer .heading2,.footer .sub-footer .mat-list .mat-list-item h6:hover{
+    color:#3f51b5;
+}
+.footer .sub-footer2 img{
+    height:32px;
+    width:32px;
+    margin-right: 10px;
+}
+::ng-deep .footer .mat-list-base .mat-list-item .mat-list-item-content{
+    padding-left:0px;
+}
+.sub-footer3 h6{
+    color:#000;
+}
+.sub-footer3 h6{
+    margin:0px;
+    font-weight: bold;
+}
+.footer{
+    background-color: #f1f1f1;
+}
+.footer ul li{
+    list-style:none;
+    padding:5px;
+    font-size: 0.75rem;
+}
+.footer ul li a{
+    color:gray;
+}
+.footer ul li a:hover{
+    text-decoration: underline;
+}
+@media(min-width:960px){
+    .footer{
+        padding: 30px 0px;
+    }}
+@media(min-width:960px){
+    .screen1{
+        padding-top: 70px;
+    }
+    .screen3 .head4,.screen10 h4,.screen5 h4{
+        margin-bottom: 30px;
+        font-size: 26px;
+        font-weight: bold;
+        color:#005082;
+    }
+    .mob-socm,.screenint1-mob{
+        display: none !important;
+    }
+}

@@ -1,0 +1,31 @@
+<style>
+        .vid_side_box_inner {
+            padding: 0 0 5px 0 !important;
+            margin: 5px 0 0 !important;
+            border-bottom: 1px solid #eee;
+        }
+        .hd5 {
+            line-height: 25px;
+        }
+        @media (max-width: 767px) {
+            .hd5 {
+                line-height: 20px;
+                font-size: 12.5px !important;
+            }
+        }
+    
+    </style>
+    
+    
+    
+    <h1>All Posts</h1><br>
+    
+    <div *ngFor="let post of details">
+        <!-- <h4>User ID: {{post.pr_content_id}}</h4><br> -->
+        <h4>Title: {{post.title}}</h4><br>
+        <h4>Description: {{post.description}}</h4><br>
+        <h4>Type: {{post.type}}</h4><br>
+        <h4>File:</h4>
+        <!-- <a href="{{post.content_url}}">Download</a> -->
+        <div *ngFor="let urls of f_urls[post.id]"><button (click)="getDownload(urls)">Download</button></div>
+        <br><br><br></div>

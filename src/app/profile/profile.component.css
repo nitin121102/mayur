@@ -1,0 +1,95 @@
+.mar-top-bap{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+.mat-points {
+    box-shadow: 0 0 20px rgba(0,0,0,.06);
+}
+.points li{
+    width: 100%;
+    list-style-type: none;
+    line-height: 1.6rem;
+    padding: 2.6rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+.points li:nth-child(even) {
+    background: #fafafa;
+}
+.ben-heading{
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    color: #3f51b5;
+    margin-bottom: 15px;
+}
+
+.main-head{
+    color:#ff0000;
+    font-size:28px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.example-form {
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.example-h2 {
+    margin: 10px;
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 40px;
+    flex-wrap: wrap;
+}
+
+.example-margin {
+    margin: 0 10px;
+
+}
+.question{
+    font-weight:600;
+    color:#000;
+    font-size:13px;
+    margin-bottom:5px;
+    line-height:28px;
+}
+
+@media (max-width:599px){
+    .main-head {
+        color: #ff0000;
+        font-size: 24px;
+    }
+    .mar-top-bap{
+        margin-top:60px;
+        clear:both;
+    }
+    .main-head{
+        margin-top:10px;
+    }
+    .points li {
+        padding: 14px;
+        line-height: 23px;
+    }
+    ben-heading {
+        font-size: 20px;
+    }
+}
+
+.example-full-width{
+    margin-bottom:0px;
+}
+p{
+    margin-bottom:0px;
+}
+.margin-top-40{
+    margin-top:30px;
+}

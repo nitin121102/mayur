@@ -1,0 +1,153 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+a{
+    text-decoration: none!important;
+}
+a:hover{
+    text-decoration: none!important;
+}
+.mat-tab-nav-bar {
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.06);
+    border-bottom: none!important;
+}
+.mat-toolbar .mat-form-field-underline{
+    background-color: #fff!important;
+}
+/*.mat-ink-bar {
+    background-color: #4285f4!important;
+}*/
+/* .btn-theme{
+    background: #4285f4!important;
+} */
+.mat-drawer-side {
+    border-right: solid 1px rgba(0,0,0,.12);
+    width: 210px;
+}
+
+.content{
+    background: #fff;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 0px 10px 10px;
+}
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif!important;
+}
+body{
+    font-family: 'Roboto', sans-serif!important;
+} */
+h1,h2,h3,h4,h5,h6,p,button,.mat-tab-label{
+    /* font-family: 'Crete Round', serif !important; */
+    /* font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif !important; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif !important;
+    /* font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important; */
+}
+.page-heading{
+    font-size: 23px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+}
+.mat-form{
+    padding:10px;
+}
+.header{
+    padding: 6px;
+    position:fixed;
+    width:100%;
+    background:#fff;
+    z-index: 999;
+    border-bottom:1px solid #ccc;
+}
+.myapp-no-padding-dialog .mat-dialog-container {
+    padding: 10px;
+  }
+html, body, app-root {
+    height: 100%;
+    margin: 0;
+}
+
+.carousel-control-next {
+    right: -73px!important;
+}
+.carousel-control-pre{
+    left: -73px!important;
+}
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%!important;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+.carousel-control-prev {
+    left: -100px!important;
+}
+.carousel-control-next {
+    right: -100px!important;
+}
+.ben-heading{
+    color:#3F51B5!important;
+}
+.question{
+    /* font-family: 'Raleway', sans-serif; */
+    padding-bottom:10px;
+}
+.mat-checkbox-layout .mat-checkbox-label{
+    font-size:14px;
+}
+.mat-radio-label-content{
+    font-size:14px;
+}
+.mat-radio-outer-circle {
+    height: 15px!important;
+    width: 15px!important;}
+.mat-radio-inner-circle{
+    height: 15px!important;
+    width: 15px!important;
+}
+.mat-radio-label-content {
+    padding-left: 0px!important;
+    padding-right: 0;
+    margin-top: -4px;
+}
+.example-form{
+    font-size: 14px;
+}
+.Padd_top{
+    padding-top:60px;
+}
+@media(max-width:768px){
+    .ben-heading {
+        font-size: 20px!important;}
+        .content {
+            background: #fff;
+            padding: 0px 10px 10px;
+            margin: 10px;
+        }
+        .example-sidenav-container{
+            margin-top:0px!important;
+        }
+        col-md-3{
+            margin-bottom:10px;
+        }
+}

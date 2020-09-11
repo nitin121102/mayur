@@ -1,0 +1,48 @@
+.pad-top-btm{
+    padding:60px 0px;
+}
+.login{
+    font-size:24px;
+    color:#000;
+    text-align:center;
+    background:#f8f8f8;
+    padding:5px;
+    margin-bottom: 20px;
+}
+
+.radio-button-class{
+    margin-bottom: 20px;
+}
+
+.example-form {
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+.header{
+     height: 49px;
+     border-bottom: 1px solid #ccc;
+ }
+.sign-up{
+    font-size:22px;
+    text-align:center;
+    background: #f8f8f8;
+    padding:5px;
+}
+.mar-top-bottom{
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+mat-card{
+    padding:10px!important;
+}
+
+p{
+    margin-bottom:0px
+}
+.header{
+    height: 49px;
+    border-bottom: 1px solid #ccc;
+}

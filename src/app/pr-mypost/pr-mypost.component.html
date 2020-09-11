@@ -1,0 +1,63 @@
+<app-pr-header></app-pr-header>
+
+    <style>
+            .vid_side_box_inner {
+                padding: 0 0 5px 0 !important;
+                margin: 5px 0 0 !important;
+                border-bottom: 1px solid #eee;
+            }
+            .hd5 {
+                line-height: 25px;
+            }
+            @media (max-width: 767px) {
+                .hd5 {
+                    line-height: 20px;
+                    font-size: 12.5px !important;
+                }
+            }
+        .c {
+                display: block;
+                width: auto;
+                height: auto;
+                padding: 5px;
+                border: 1px solid #ccc; 
+            }
+            h2{
+                color: #005082;
+            }
+        </style>
+        
+        
+    
+        <div class="container">
+            <div fxLayout="row" class="myposts">
+            <div fxFlex.lt-md="0%" fxFlex.gt-sm="10%"></div>
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="80%" fxLayout="column" fxLayoutAlign="center center">
+
+           
+        <h2 align="center">My Posts</h2>
+        
+        <div *ngFor="let post of details" style="width:100%;"> 
+            <div *ngIf="post.status_form != 0">
+                <div class="c">
+                <h4 id="title">Title:</h4><p>{{post.title}}</p>
+                <h4 id="desc">Description:</h4><p>{{post.description}}</p>
+                <!-- <h4>Type:</h4>{{post.type}}<br> -->
+                <h4>Uploads:</h4>
+                <!-- <a href="{{post.content_url}}">Download</a> -->
+                <!-- <div *ngFor="let urls of f_urls[post.id]"><button (click)="getDownload(urls)">
+                    <div *ngFor="let names of f_names[post.id]">
+                        <div>{{names}}</div>
+                    </div></button>
+                </div> -->
+                <div *ngIf="f_urls[post.id] && post.status_form==1">
+                <div *ngFor="let i of createRange(f_urls[post.id].length)">
+                <button id="download"  (click)="getDownload1(f_urls[post.id][i],f_names[post.id][i])">{{f_names[post.id][i]}}</button>
+                </div></div>
+            </div><br><br><br>
+            </div>
+        </div>
+    </div>
+    <div fxFlex.lt-md="0%" fxFlex.gt-sm="10%"></div>
+</div>
+</div>

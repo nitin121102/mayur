@@ -1,0 +1,22 @@
+.header{
+    background-color: #000839;
+}
+h5{
+    /* font-size: 24px; */
+    margin:0px;
+    font-size: 26px;
+    color:#fff;
+}
+h5 a{
+    color:#fff;
+}
+@media(max-width:599px){
+    h5{
+      font-size: 16px;
+    }
+  }
+  @media(min-width:600px) and (max-width:959px){
+    h5{
+      font-size: 24px;
+    }
+  }

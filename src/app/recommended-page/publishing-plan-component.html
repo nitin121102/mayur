@@ -1,0 +1,89 @@
+
+<div fxLayout="row" fxLayoutAlign="end">
+    <img src="https://storage.googleapis.com/web-assets/social-media-icons/close.png" style="width:22px">
+</div>
+<form role="form" (ngSubmit)="recommend()" #f="ngForm">
+<div class="promotion">
+    <div class="container" style="padding:0px;">
+        <div fxLayout="column" class="box-shadows">
+	
+        <div fxLayout="row">
+            <div fxLayout.lt-sm="column" fxLayout.lt-md="row wrap" fxLayout.gt-sm="row" style="width:100%;">
+    
+<!--                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column1">
+                    <div class="columnone-one">
+                        <p class="title">Price $ 20</p>
+                        <p style="font-size:16px;">(Select any one)</p>
+                        <div>
+                             <div><h5 class="heading1">Website1</h5></div> 
+                             <ul>
+                                <li><mat-radio-button>Live streaming</mat-radio-button></li>
+                                <li><mat-radio-button>Live updates</mat-radio-button></li>
+                                <li><mat-radio-button>Live streaming</mat-radio-button></li>
+                                <li><mat-radio-button>Live updates</mat-radio-button></li>
+                                <li><mat-radio-button>Live streaming</mat-radio-button></li>
+                                <li><mat-radio-button>Live updates</mat-radio-button></li>
+                            </ul> 
+			                                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="Categoryselected">
+	       <mat-radio-button class="example-radio-button" *ngFor="let category of Category" [value]="-!>Category" onclick="myFunction1()"> {{category}} </mat-radio-button>
+</mat-radio-group>
+                        </div>
+                    </div>
+		    </div>-->
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column2">
+                    <div class="columntwo-one">
+                        <p class="title">Time to Publish</p>
+                        <p style="font-size:16px;">(Select one)</p>
+                        <div>
+                            <!-- <div><h5 class="heading1">Threee ways to publish</h5></div> -->
+                            <ul>
+                                <li><mat-checkbox (change)="myFunction2($event,1)">Within 7 days</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction2($event,2)">Within 3 days</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction2($event,3)">Within 24 hours</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction2($event,4)">Within 3 hours</mat-checkbox></li>
+                           
+                            </ul>
+                        </div>  
+                    </div>
+                </div>
+
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column3">
+                    <div class="columnthree-one">
+                        <p class="title">Content Limit</p>
+                        <p style="font-size:16px;">(Select one)</p>
+                        <div>
+                            <!-- <div><h5 class="heading1">Website1</h5></div> -->
+                            <ul>
+                                <li><mat-checkbox (change)="myFunction3($event,1)">>80 articles/month</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction3($event,2)">40-80 articles/month</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction3($event,3)">10-40 articles/month</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction3($event,4)"> < 10 artices/month</mat-checkbox></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column4">
+                    <div class="columnfour-one">
+                        <p class="title">Services</p>
+                        <p style="font-size:16px;">(Select multiple)</p>
+                        <div>
+                            <!-- <div><h5 class="heading1">Website1</h5></div> -->
+                            <ul>
+                                <li><mat-checkbox (change)="myFunction4($event,1)">Podcast</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction4($event,2)">Social media</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction4($event,3)">Youtube</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction4($event,4)">Website</mat-checkbox></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <button mat-flat-button style="background-color: #005082;;color:#fff;font-weight: bold;" (click)="recommend()" >Recommended</button>
+        </div>
+		
+    </div>
+    </div>
+</div>
+</form>

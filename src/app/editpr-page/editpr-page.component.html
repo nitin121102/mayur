@@ -1,0 +1,63 @@
+<section class="back2">
+    <section class="container">
+      <div class="book-slot-page">
+        <div class="row">
+          <div class="col-md-12">
+          </div>
+        </div>
+        <div fxLayout="row" fxLayout.lt-md="column">
+          <div fxFlex="10" fxShow.lt-md="false"></div>
+          <div fxFlex="80">
+            <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+              <div fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlex="20"></div>
+                <div fxFlex="60">
+                  <h2 class="book-heading"> Edit Your Profile</h2>
+  
+                  <mat-card>
+                    <form class="example-form">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="E-mail" name="email"
+                               [(ngModel)]="model.email" #email="ngModel" required>
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="password" name="password"
+                               [(ngModel)]="model.password" #password="ngModel" required>
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Mobile" name="mobile"
+                               [(ngModel)]="model.mobile" #mobile="ngModel" required>
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Country Code" name="country_code"
+                               [(ngModel)]="model.country_code" #country_code="ngModel" required>
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Confirm Password" name="confirmpassword"
+                               [(ngModel)]="model.confirmpassword" #confirmpassword="ngModel" required>
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Gender" name="gender"
+                               [(ngModel)]="model.gender" #gender="ngModel" required>
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="E-mail" name="authority"
+                               [(ngModel)]="model.authority" #authority="ngModel" required>
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Username" name="username"
+                               [(ngModel)]="model.username" #username="ngModel" required>
+                      </mat-form-field>
+                    </form>
+                    <button mat-raised-button color="primary"  class="btn-class" type="submit" >Update</button>
+                    <p style="text-align:center;margin-top:10px;"> <span>
+                        <a [routerLink]="['/your-profile']" style="text-decoration: underline;padding-left:10px;">Go Back</a></span>
+                    </p>
+                  </mat-card>
+                </div>
+                <div fxFlex="20"></div>
+              </div>
+            </form>
+          </div>
+          <div fxFlex="10" fxShow.lt-md="false"></div>
+        </div>

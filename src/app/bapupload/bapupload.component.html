@@ -1,0 +1,140 @@
+<!--<app-nav></app-nav>-->
+
+<app-brand-header></app-brand-header>
+
+<div class="container ">
+            <div fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlex="20"></div>
+                <div fxFlex="60" class="margin-top-40">
+      <mat-card>
+                        <mat-tab-group class="mat-tap-part">
+                            <mat-tab label="Image Upload">
+                                <div class="example-container">
+                                    <form name="form" (ngSubmit) = "On_Submit(1)" id="video_form" novalidate #f1 = "ngForm" class="example-form" >
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Image  Heading" type="video_heading" name="video_heading" [(ngModel)]="model.image_headline" #email="ngModel" required autofocus id="video_heading" >
+                                                </mat-form-field>
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Image Sub Heading" type="video_sub_heading" name="video_sub_heading" [(ngModel)]="model.image_sub_headline" #email="ngModel" required autofocus id="image_sub_heading" >
+                                                </mat-form-field>
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Event Name " type="video_url" name="video_url" [(ngModel)]="model.image_event" #email="ngModel">
+                                                </mat-form-field>
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder=" Doctor Name" type="video_url" name="video_url" [(ngModel)]="model.image_doctor" #email="ngModel">
+                                                </mat-form-field>
+                                        <p><b>Upload Image</b></p>
+                                        <input type="file" accept="image/x-png,image/gif,image/jpeg" class="inputFile" (change)="selectFile($event)" >
+                                        <input type="hidden" value="{{uploadedfile}}" name="image" [(ngModel)]="model.image" #image="ngModel">
+
+                                        <mat-progress-bar *ngIf="this.loading && (this.uploadedfile==null)" mode="indeterminate" style="margin-top:10px;"></mat-progress-bar>
+
+                                        <div  class="usr-pic" *ngIf="this.uploadedfile!=null">
+                                            <img src="{{uploadedfile}}" alt=""/>
+                                        </div>
+<!--                                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
+
+
+
+                                        <div align="left" style="margin-top:20px;">
+                                             <button color="primary" type="submit" id="submit" [disabled]="this.uploadedfile==null || f1.form.invalid" mat-flat-button> Submit</button>
+                                        </div>
+
+<!--                                        <mat-label *ngIf="f1.form.invalid" color="warn"> Please fill all the details! </mat-label>-->
+
+
+                                    </form >
+
+                                </div>
+
+                            </mat-tab>
+
+
+
+
+
+                            <mat-tab label="Video Upload">
+                                <div class="example-container">
+                                    <form name="form" (ngSubmit) = "On_Submit(2)" id="as" novalidate #f = "ngForm" class="example-form" >
+
+                                              <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Video Heading" type="video_heading" name="video_heading" [(ngModel)]="model.video_headline" #email="ngModel" required autofocus id="image_heading" >
+                                                </mat-form-field>
+
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Video Sub Heading" type="video_sub_heading" name="video_sub_heading" [(ngModel)]="model.video_sub_headline" #email="ngModel" required autofocus id="asc" >
+                                                </mat-form-field>
+
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder=" Doctor Name " type="video_url" name="video_url" [(ngModel)]="model.video_doctor" #email="ngModel" required autofocus id="image_url" >
+                                                </mat-form-field>
+
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder=" Event " type="video_image_url" name="video_image_url" [(ngModel)]="model.video_event" #email="ngModel" required autofocus id="video_image_url" >
+                                                </mat-form-field>
+                                        <div class="article_hd1">Upload Video</div>
+                                        <input type="file" accept="video/mp4,video/x-m4v,video/*" class="inputFile" (change)="selectFile2($event)" >
+                                        <input type="hidden" value="{{uploadedfile2}}" name="image" [(ngModel)]="model.video" #image="ngModel">
+                                        <div  class="usr-pic" *ngIf="this.uploadedfile2!=null">
+
+
+
+
+                                            <div class="col-md-12">
+                                                <div class="text-center" >
+                                                    <vg-player class="vid_img ratio-4-3" style="width:100%">
+                                                        <vg-overlay-play></vg-overlay-play>
+                                                        <vg-buffering></vg-buffering>
+                                                        <vg-scrub-bar style="bottom: 36px !important;">
+                                                            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                                            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                                                        </vg-scrub-bar>
+                                                        <vg-controls style="height:36px !important;" [vgAutohide]="true"
+                                                                     [vgAutohideTime]="1.5">
+                                                            <vg-play-pause></vg-play-pause>
+                                                            <vg-playback-button></vg-playback-button>
+                                                            <!--<img width="30px;" (click)="backward(media)" class="control-fr"
+                                                                 src="../assets/backward2.jpg">
+                                                            &nbsp;
+                                                            <img width="30px;" (click)="forward(media)" class="control-br"
+                                                                 src="../assets/forward2.jpg">-->
+                                                            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                                            <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+                                                            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+                                                            <vg-track-selector></vg-track-selector>
+                                                            <vg-mute></vg-mute>
+                                                            <vg-volume></vg-volume>
+                                                            <vg-fullscreen></vg-fullscreen>
+                                                        </vg-controls>
+                                                        <video [vgMedia]="media" #media id="singleVideo"
+                                                               preload="auto">
+                                                            <!--                     (play)="loveit(single_article['anchor'])"-->
+                                                            <!--                     poster="{{single_article['image_url']}}">-->
+                                                            <source  [src]="uploadedfile2" type="video/mp4">
+                                                        </video>
+                                                    </vg-player>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <br/>
+                                        <button color="primary" type="submit" id="submit2" [disabled]="this.uploadedfile2 == null || f.form.invalid" mat-flat-button > Submit</button>
+                                        <mat-progress-bar *ngIf="this.loading2 && (this.uploadedfile2==null)" mode="indeterminate"></mat-progress-bar>
+                                        <mat-label *ngIf="f.form.invalid" color="warn"> Please fill all the details! </mat-label>
+                                    </form >
+
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+
+
+            </mat-card>
+                </div>
+                <div fxFlex="20"></div>
+
+        </div>
+    </div>
+
+
+<!--</body>-->

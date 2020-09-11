@@ -1,0 +1,305 @@
+<app-pr-header></app-pr-header>
+
+<!-- <div class="section1">
+    <div class="container">
+        <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                <h6>Atluri Chowdary, you are signed in.</h6>
+            </div>
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="section2">
+    <div class="container" fxLayout="column">
+        <h6>Student Marketeer - Wing - University of North Florida</h6>
+        <div class="head-block" fxLayout.lt-md="row wrap" fxLayout.gt-sm="row" fxLayout="row">
+            <h6 class="head-bg1"><a href="#">Questionnaire</a></h6>
+            <h6 class="head-bg"><a href="#">Personal Information</a></h6>
+            <h6 class="head-bg"><a href="#">Prescreening Questionnaire</a></h6>
+            
+        </div>
+      
+    </div>
+</div>
+
+<div class="section3">
+    <div class="container">
+        <h6><b>QUESTIONNAIRE</b></h6>
+        <p>Mandatory fields are marked with an asterisk.<span style="color:red;">*</span></p>
+        <p><b>Please answer the following questions as accurately as possible.</b></p>
+        <form role="form" (ngSubmit)="personaldetails()" #f="ngForm" novalidate class="example-form">
+        <div class="que1">
+            <p><span style="color:red;"><sup>*</sup></span>Personal details</p>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" name="age" id="age"  placeholder="Your Age" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.address"
+                       #age="ngModel" required >
+          
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" name="address" id="address"  placeholder="Street Address" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.address"
+                       #address="ngModel" required >
+          
+            </mat-form-field>
+            <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="15px">
+                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+
+                  <mat-form-field class="example-full-width">
+                      <mat-select placeholder="Select country" (selectionChange)="onSelect(country.value)" name="country" [(ngModel)]="model.country" #country="ngModel" id="country" required>
+                    
+                       <mat-option [value]="model.country">{{model.country}}</mat-option>
+
+                          <mat-option *ngFor="let country of all_countries" [value]="country.country_id">{{country.country_name}}</mat-option>
+                      </mat-select>
+                  </mat-form-field><br>
+
+              </div>
+              <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+
+                  <mat-form-field class="example-full-width">
+                      <mat-select placeholder="Select state"  (selectionChange)="onSelectstate(state.value)" name="state" [(ngModel)]="model.state" #state="ngModel" id="state" required>
+                        
+                         <mat-option [value]="model.state">{{model.state}}</mat-option>
+                          <mat-option *ngFor="let state of all_states" [value]="state.state_id">{{state.state_name}}</mat-option >
+                      </mat-select>
+                  </mat-form-field><br>
+
+              </div>
+            </div>
+            <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="15px">
+                    <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                      <mat-form-field class="example-full-width">
+                          <input name="pincode" matInput placeholder="ZIP/Postal code" [(ngModel)]="model.pincode" #postal_code="ngModel" required>
+                      </mat-form-field>
+                  </div>
+                  <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                      <mat-form-field class="example-full-width">
+                          <mat-select id="city" placeholder="select city" [(ngModel)]="model.city"  (selectionChange)="onSelectcity(city.value)" name="city" #city="ngModel" required>
+                              
+                              <mat-option [value]="model.city">{{model.city}}</mat-option>
+                              <mat-option *ngFor="let city of all_cities" [value]="city.city_id">{{city.city_name}}</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                  </div>
+                </div>
+    
+        </div>
+        <div class="que1">
+            <p><span style="color:red;"><sup>*</sup></span>1. What is your current college status?</p>
+            <mat-radio-group aria-label="Select an option" fxLayout="column" [(ngModel)]="model.education_level" name="education_level" required aria-label="Select an option" >
+                <mat-radio-button value="MBBS">MBBS</mat-radio-button>
+                <mat-radio-button value="Post graduate">Post Graduate</mat-radio-button>
+                <mat-radio-button value="MD">MD</mat-radio-button>
+                <mat-radio-button value="DNB">DNB</mat-radio-button>
+            </mat-radio-group>              
+        </div>
+      
+    
+        <div class="que1">
+            <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutGap.lt-sm="15px" fxLayoutGap.gt-xs="15px">
+                <button mat-flat-button (click)="personaldetails()">save and continue</button>
+               
+            </div>
+        </div>
+       
+        </form>
+    </div>
+</div>
+<br>
+<br> -->
+  <!-- <div class="que1">
+            <p><span style="color:red;"><sup>*</sup></span>1. What is your current college status?</p>
+            <textarea id="review" name="review" rows="2" cols="25"></textarea>
+        </div> -->
+
+<!-- <app-pr-header></app-pr-header> -->
+
+<div class="section1">
+    <div class="container">
+        <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                <h6>{{ usern}} {{ userl}}, you are signed in.</h6>
+            </div>
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="section2">
+    <div class="container" fxLayout="column">
+        <h6>Student Medico Journalist - Wing - {{ college}}</h6>
+        <div class="head-block" fxLayout.lt-md="row wrap" fxLayout.gt-sm="row" fxLayout="row">
+            <!-- <h6 class="head-bg"><a href="#">Questionnaire</a></h6> -->
+            <h6 class="head-bg1"><a href="#">Personal Information</a></h6>
+            <h6 class="head-bg"><a [routerLink]="['/questionaire']">Questionnaire</a></h6>
+          
+        </div>
+        <br>
+        <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutGap.lt-sm="15px" fxLayoutGap.gt-xs="15px">
+            <button mat-flat-button (click)="personaldetails()">save and continue</button>
+            
+        </div>
+    </div>
+</div>
+
+<div class="section3">
+    <div class="container">
+        <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="50px" style="width:100%;">
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="70%">           
+        <h6><b>PERSONAL INFORMATION</b></h6>
+        <p>Mandatory fields are marked with an asterisk.<span style="color:red;">*</span></p>
+        <p>Source Tracking</p>
+        <p><b>Please indicate how you heard about this job.</b></p>
+        <!-- <form fxLayout="column" style="width:100%;"> -->
+            <form role="form" (ngSubmit)="personaldetails()" #f="ngForm" novalidate class="example-form">
+            <div class="que1">
+                <p><span style="color:red;"><sup>*</sup></span>Source Type</p>
+                <mat-form-field class="example-full-width">
+                    <input matInput type="text" name="source" id="source"  placeholder="Where did you hear about us?" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model.source"
+                           #source="ngModel" required >
+              
+                </mat-form-field>
+           
+            </div>
+       
+        <br>
+        <p>Personal Information</p>
+        <p>Please enter all relevant personal information in the fields below.</p>
+        <div class="que1" fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="20px">
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" name="age" id="age"  placeholder="Your Age" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model.age"
+                       #age="ngModel" maxlength="3" required >
+          
+            </mat-form-field>
+        </div>
+        <div class="que1" fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="20px">
+            <mat-form-field class="example-full-width">
+                <input matInput type="url" name="linkedin" id="linkedin"  placeholder="Enter your Linkedin Profile URL" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model.linkedin"
+                       #linkedin="ngModel">
+          
+            </mat-form-field>
+        </div>
+        <!-- <div class="que1" fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="20px">
+            <mat-form-field class="example-full-width">
+                <input matInput type="url" name="facebook" id="facebook"  placeholder="Enter your Facebook Profile URL" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model.linkedin"
+                       #linkedin="ngModel" required >
+          
+            </mat-form-field>
+        </div> -->
+        <div class="que1" fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="20px">
+            <mat-form-field class="example-full-width">
+                <input matInput type="url" name="facebook" id="facebook"  placeholder="Enter your Facebook Profile URL" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model.facebook"
+                       #facebook="ngModel" required >
+          
+            </mat-form-field>
+        </div>
+        <div class="que1" fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="20px">
+            <mat-form-field class="example-full-width">
+                <input matInput type="url" name="social" id="social"  placeholder="Other Social Media URL" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model.social"
+                       #social="ngModel">
+          
+            </mat-form-field>
+        </div>
+        <br>
+        <!-- <p>Personal Information</p>
+        <p>Please enter all relevant personal information in the fields below.</p> -->
+        <div class="que1" fxLayout="column">
+            <p><span style="color:red;"><sup>*</sup></span>Street Address</p>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" name="address" id="address"  placeholder="Street Address" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model.address"
+                       #address="ngModel" required >
+          
+            </mat-form-field>
+        </div>
+      
+        <div class="que1" fxLayout="column">
+            <p><span style="color:red;"><sup>*</sup></span>Zip/Postal Code</p>
+            <mat-form-field class="example-full-width">
+                <input name="pincode" matInput placeholder="ZIP/Postal code" [(ngModel)]="model.pincode" #postal_code="ngModel" required>
+            </mat-form-field>
+        </div>
+    
+     
+        <p>Place of Residence</p>
+        <!-- <form fxLayout="column" style="width:100%;"> -->
+            <div class="que1">
+                <p><span style="color:red;"><sup>*</sup></span>Country</p>
+                <mat-form-field class="example-full-width">
+                    <mat-select placeholder="Select country" (selectionChange)="onSelect(country.value)" name="country" [(ngModel)]="model.country" #country="ngModel" id="country" required>
+                     <!-- <mat-option value="Select country" disabled selected >Select country</mat-option> -->
+                     <mat-option [value]="model.country">{{model.country}}</mat-option>
+
+                        <mat-option *ngFor="let country of all_countries" [value]="country.country_id">{{country.country_name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="que1">
+                <p><span style="color:red;"><sup>*</sup></span>State/Province</p>
+                <mat-form-field class="example-full-width">
+                    <mat-select placeholder="Select state"  (selectionChange)="onSelectstate(state.value)" name="state" [(ngModel)]="model.state" #state="ngModel" id="state" required>
+                        <!-- <mat-option value="Select state" disabled selected >Select state</mat-option> -->
+                        
+                       <mat-option [value]="model.state">{{model.state}}</mat-option>
+                        <mat-option *ngFor="let state of all_states" [value]="state.state_id">{{state.state_name}}</mat-option >
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="que1" fxLayout="column">
+                <p><span style="color:red;"><sup>*</sup></span>City</p>
+                <mat-form-field class="example-full-width">
+                    <mat-select id="city" placeholder="select city" [(ngModel)]="model.city"  (selectionChange)="onSelectcity(city.value)" name="city" #city="ngModel" required>
+                        <!-- <mat-option value="select city" disabled selected >Select city</mat-option> -->
+                        <mat-option [value]="model.city">{{model.city}}</mat-option>
+                        <mat-option *ngFor="let city of all_cities" [value]="city.city_id">{{city.city_name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="que1">
+                <p style="margin-bottom: 8px;"><span style="color:red;"><sup>*</sup></span>What is your Current Educational Level?</p>
+                <mat-radio-group aria-label="Select an option" fxLayout="column" [(ngModel)]="model.education_level" name="education_level" required aria-label="Select an option" >
+                    <mat-radio-button value="MBBS">MBBS</mat-radio-button>
+                    <mat-radio-button value="Post graduate">Post Graduate</mat-radio-button>
+                    <mat-radio-button value="MD">MD</mat-radio-button>
+                    <mat-radio-button value="DNB">DNB</mat-radio-button>
+                </mat-radio-group>              
+            </div>
+       
+            <br>
+        
+           
+        <!-- </form> -->
+        <br>
+        <br>
+        <p><b>Job Posting Notification</b></p>
+      <p>Sign up to our email notification to receive information from TheRightDoctors and its affiliated companies on future job offers that might fit to your applicant profile as created via Job Board.</p>
+        <mat-checkbox><p style="font-size: 12px;white-space: normal;line-height: 12px;margin: 0px;"> an email notification whenever a new position matching this profile is posted.</p></mat-checkbox>
+        <br><br>
+        <div class="que1">
+            <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutGap.lt-sm="15px" fxLayoutGap.gt-xs="15px">
+                <button mat-flat-button (click)="personaldetails()">save and continue</button>
+                <!-- <button mat-flat-button>save as draft</button> -->
+            </div>
+        </div>
+    </form>
+    </div>
+
+<div fxFlex.lt-md="100%" fxFlex.gt-sm="30%">
+    <div class="que2">
+        <p><b>Multiple selections</b></p>
+        <p>To (de)select multiple options using a PC, hold down the Ctrl key and click all relevant values (for Mac, use the Command key).</p>
+    </div>
+    <div class="que2">
+        <p><b>Email Notifications</b></p>
+        <p>When you select the checkbox, the system sends an email notification whenever a new position matching the profile is posted.</p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>

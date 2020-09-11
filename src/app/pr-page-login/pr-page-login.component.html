@@ -1,0 +1,59 @@
+<!--<meta name="viewport" content = "width=device-width, initial-scale="1">-->
+<style>
+    /* body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .bg {
+        background-image: url("../../assets/pixel.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+        width:100%;
+    }
+    .layer{
+        background: rgba(33, 37, 41, 0.5686274509803921);
+        height:100%;
+        width:100%;
+    } */
+</style>
+<body>
+ <app-pr-header></app-pr-header>
+    <div class="bg">
+        <div class="layer">
+        <div class="container">
+            <div fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlex="30"></div>
+                <div fxFlex="40" class="pad-top-btm">
+                    <mat-card style="padding:10px;margin-top:100px">
+                        <h4 class="login">Login</h4>
+                        <form class="example-form" role="form" (ngSubmit)="login_validation()" #ff="ngForm" novalidate >
+                            <p>
+                                <mat-form-field  class="example-full-width">
+                                   
+                                    <input matInput placeholder="Email" type="email" name="user_id" [(ngModel)]="model.user_id" style="box-shadow:none;border:0;background:transparent" required>
+                                </mat-form-field>
+                            </p>
+                            <p>
+                                <mat-form-field  class="example-full-width">
+                                 
+                                    <input matInput placeholder="Password" type="password" name="password" [(ngModel)]="model.password" style="box-shadow:none;border:0;background:transparent" required>
+                                </mat-form-field>
+                            </p>
+                            <button mat-flat-button color="primary" id="pr-login" [disabled]="!ff.form.valid">Submit</button><span><a [routerLink]="['/forgot-password']" style="text-decoration: underline;padding-left:10px;">Forgot Password</a></span>
+                            <p style="text-align:center;margin-top:10px;">Dont Have an Account ? <span>
+                            <a [routerLink]="['/register']" style="text-decoration: underline;padding-left:10px;">Register</a></span>
+                            </p>
+                        </form>
+                    </mat-card>
+                </div>
+                <div fxFlex="30">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+

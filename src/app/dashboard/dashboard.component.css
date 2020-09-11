@@ -1,0 +1,29 @@
+.example-icon {
+    padding: 0 14px;
+    font-size:14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.search-with {
+    width:400px;
+    margin-top:20px;
+    color:#fff!important;
+}
+.example-action-button {
+    margin-bottom: 8px;
+}
+.mat-toolbar-multiple-rows {
+    min-height: 64px;
+    background: #4285f4;
+}
+.mat-row-head span{
+    color:#fff;
+}
+
+.back-shodow{
+    margin-top:20px;
+    box-shadow: 0 0 20px rgba(0,0,0,.06);
+    padding:10px;
+}

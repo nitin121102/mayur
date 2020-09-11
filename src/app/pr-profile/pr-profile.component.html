@@ -1,0 +1,23 @@
+<app-pr-header></app-pr-header>
+
+<div class="banner-upload-space" >
+    <div class="container">
+        <div fxLayout="row" fxLayout.lt-md="column">
+            <div fxFlex="20"></div>
+            <div fxFlex="60">
+                <mat-card class="mat-form">
+                    <h2>Profile</h2>
+                    <ul class="points">
+                        <li><b>Name :</b> {{name}}</li>
+                        <li><b>Email :</b> {{email}}</li>
+                        <li><b>Gender :</b> {{gender}}</li>
+                        <li><b>Country Code :</b> {{country}}</li>
+                        <li><b>Mobile :</b> {{mobile}}</li>
+                    </ul>
+                    <div><button><a [routerLink]="['/editpr-page/']+id">Edit</a></button></div>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

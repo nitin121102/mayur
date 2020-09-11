@@ -1,0 +1,450 @@
+h1,h2,h3,h4,h5,h6,p,button{
+    /* font-family: Arial, Helvetica, sans-serif !important; */
+    font-family: 'Lato', sans-serif !important;
+}
+
+
+.apply,.screen3{
+    position: relative;
+}
+.apply .apply2 h2,.apply .apply2 h6,.apply .apply2 p{
+    color:#fff;
+}
+.apply .apply2 button{
+    background-color: #005082;
+    color:#fff;
+    width: fit-content;
+}
+
+.screen5 h5,.screen2 h5{
+    font-size: 24px;
+    color: #005082;
+    font-weight: bold;
+}
+.screen4 .mat-card{
+    box-shadow: none !important;
+    border:1px solid #ccc;
+}
+.screen44 .mat-card{
+    box-shadow: none !important;
+    border:1px solid #ccc;
+}
+.respons{
+    padding:16px;
+    margin:10px;
+    border:1px solid #ccc;
+}
+.screen6 h6{
+    /* font-weight: bold; */
+    font-weight: normal;
+    margin:0px;
+    text-align: center;
+}
+.hei-hun,.respons,.respons1{
+    height: 100%;
+}
+.screen7 button,.btm-fix button{
+    background-color: #000839;
+    /* color:#fff; */
+    width: fit-content;
+    font-size: 20px;
+}
+.screen7 button a,.btm-fix button a{
+    color: #fff;
+}
+.screen7 button:hover,.btm-fix button:hover{
+    background-color: #fff;
+    color: #000839;
+    border:1px solid #000839;
+}
+.screen7 button:hover a,.btm-fix button:hover a{
+    color: #000839;
+}
+.screen4 h5{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.screen5 p{
+    font-size: 20px;
+    line-height: 1.33;
+}
+.btm-fix{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    padding:5px 0px;
+    /* background-color: #005082; */
+    background-color: #f1f1f1;
+}
+.screen2 h5,.screen7 h2{
+    text-transform: uppercase;
+    color:#005082;
+    text-align: center;
+}
+.screen4 .bg-col,.screen4 .bg-col .mat-card{
+    background-color: #f1f1f1;
+}
+.screen6 h2,.screen5 h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+.screen5 ul li p{
+    margin-bottom: 8px;
+}
+@media(max-width:959px){
+    .screen5 ul{
+        padding-left: 16px;
+    }
+    .screen7 h2,.screen2 h5,.screen6 h2,.screen5 h2{
+        margin-bottom: 16px;
+    }
+    .respons1{
+        padding:16px;
+        margin:10px;
+        border:1px solid #ccc;
+        background-color: #f1f1f1;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    }
+    .screen2 .para1,.screen7 .para1{
+        font-size: 18px;
+        text-align: center;
+    }
+    .apply2 .padd-left{
+        padding-left: 15px;
+    }
+    .apply2 h2{
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .apply p{
+        font-size: 18px;
+    }
+    .apply h4{
+        font-size: 24px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .apply{
+        margin-top: 45px;
+    }
+    .apply,.screen2,.screen3,.screen4,.screen5,.screen6,.screen7{
+        margin-bottom: 50px;
+    }
+    .screen3 .mob-hide{
+        display: none !important;
+    }
+    .screen2 h5,.screen5 h2,.screen7 h2{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .screen6 h2,.screen5 h2{
+        /* font-size: 32px; */
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .screen5 h5{
+        font-size: 22px;
+    }
+    .apply .container{
+        padding:0px !important;
+        margin: 0px;
+        width: 100%;
+    }
+    .apply .mob-view{
+        background-color: #005082;
+        padding:8px;
+    }
+   .apply .desk-view{
+        display: none !important;
+    }
+}
+@media(min-width:960px){
+    .screen7 h2,.screen2 h5,.screen6 h2,.screen5 h2{
+        margin-bottom: 32px;
+    }
+    .apply .mob-view{
+        display:  none !important;
+    }
+    .apply .apply2,.screen3 .apply2{
+        position: absolute;
+        top: 90%;
+        transform: translateY(-90%);
+    }
+    .apply2 .padd-left{
+        /* padding-left: 50px; */
+    }
+    .apply .apply2 h4{
+        /* font-size: 42px; */
+        font-size: 60px;
+        font-weight: bold;
+        color:#fff;
+    }
+    .screen2 .para1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .screen7 .para1{
+        font-size: 36px;
+        line-height: 1.33;
+        text-align: center;
+    }
+    .apply{
+        margin-top: 48px;
+    }
+    .screen5 h2,.screen5 h2,.screen6 h2{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .screen5 h5{
+        font-size: 24px;
+    }
+    
+    .screen2 h5,.screen7 h2{
+        font-size: 42px;
+        font-weight: bold;
+    }
+    .apply,.screen2,.screen3,.screen4,.screen5,.screen6,.screen7{
+        margin-bottom: 100px;
+    }
+    .respons,.respons1{
+        padding:16px;
+        margin:10px;
+        border:1px solid #ccc;
+    }
+    .respons:hover,.respons1:hover{
+        background-color: #f1f1f1;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    }
+    .screen6 h6{
+        font-size: 22px !important;
+    }
+}
+.screen1 button{
+    color: #005082;
+    background-color:#fff;
+    border-radius: 4px;
+    border: 1px solid #005082;
+    /* width: fit-content; */
+    /* padding: 0px 50px; */
+    font-size: 16px;
+}
+.screen1 button:hover{
+    background-color: #005082;
+    color:#fff;
+    border:1px solid #005082;
+}
+h1{
+    /* color:#000; */
+    /* color: #fff; */
+    /* font-weight: bold; */
+
+}
+.topics button{
+    background-color: #fff;
+    color: #005082;
+    border:1px solid #005082;
+    width: fit-content;
+}
+.row-width1 h6{
+    font-size: 19px;
+    line-height: 1.3125;
+}
+.img-res,.row-width1,.row-width2{
+    width: 100%;
+}
+@media(max-width:959px){
+    .mob-view-head h5{
+        color: #FF4081 !important;
+    }
+    .dis-des{
+        display: none !important;
+    }
+    .screen1 h1{
+        line-height: 1.3125;
+        font-weight: bold;
+        font-size:30px;
+        color: #000;
+        /* color:#FF4081 !important; */
+        /* text-align: center; */
+    }
+    .mob-view-head h5{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #005082;
+    }
+    .headi-des h6{
+        line-height: 22px;
+    }
+    .screen1{
+        /* margin-top:70px; */
+        margin-top: 30px;
+    }
+    .row-width1{
+        padding-bottom: 50px;
+    }
+    .row-width1 h3{
+        font-size: 24px !important;
+        color:#005082;
+    }
+    .headi-des{
+        display: none !important;
+    }
+    .log-btn-mob{
+        margin-top: 40px;
+    }
+    .row-width1 h5{
+        color:#000;
+    }
+    .pos-fix{
+        display: none !important;
+    }
+    .row-width3 ul{
+        padding:0px;
+    }
+    .row-width3 ul li{
+        list-style: none;
+        color: #424242;
+    }
+    .row-width3 ul li a{
+        /* color: gray; */
+        color: #fff;
+    }
+    .row-width3{
+        padding:0px 15px;
+        background-color: #424242;
+    }
+}
+@media(min-width:960px){
+    .screen1 button{
+        /* padding: 0px 100px; */
+    }
+    .screen1 h1{
+        /* font-size: 42px; */
+        font-size: 30px;
+        line-height: 1.3125;
+        color: #fff;
+        font-weight: bold;
+
+        /* font-netflix */
+        /* font-size: 3.125rem;
+        line-height: 1.1;
+        margin-bottom: 19px; */
+        /* margin-bottom: .5rem; */
+    }
+    .screen1 .pos-fix{
+        height:100vH;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .bg-b{
+        /* background-color: #005082; */
+        /* background: #56CCF2;  
+background: -webkit-linear-gradient(to bottom, #56CCF2, #2F80ED); 
+background: linear-gradient(to bottom, #56CCF2, #2F80ED);  */
+        /* background: #373B44; 
+        background: -webkit-linear-gradient(to bottom, #4286f4, #373B44); 
+        background: linear-gradient(to bottom, #4286f4, #373B44);  */
+        /* height: 100%; */
+        background-color: #005082;
+        padding-top: 100px;
+    }
+    .row-width1{
+        background-color: #005082;
+    }
+    .screen1 h6{
+        /* font-weight: bold; */
+        color:#005082;
+        /* font-size: 20px; */
+        font-size: 19px;
+        line-height: 1.3125;
+        text-transform: uppercase;
+        /* netflix */
+        /* font-size: 1.625rem;
+    font-weight: 400; */
+    }
+    .row-height1,.bg-bs{
+        height:100%;
+    }
+    .screen1{
+        /* height:100%; */
+        height: auto;
+    }
+    .para1{
+        color: #000;
+        /* color:#fff; */
+        /* font-size: 22px; */
+        /* line-height: 30px; */
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 1.3125;
+        width: 70%;
+         /* netflix */
+         /* font-size: 1.625rem;
+         font-weight: 400; */
+    }
+    .log-btn{
+        width: 70%;
+        margin-top: 60px;
+    }
+
+    .hei-m h6{
+        color: #fff !important;
+        font-weight: normal;
+    }
+    .hei-m{
+        /* padding-top: 150px; */
+        padding:120px 0px;
+    }
+    .padd-tb{
+        /* padding:300px 0px 150px 0px; */
+    }
+    .row-width1 h3{
+        color:#fff;
+        font-size: 32px;
+        font-weight: normal;
+    }
+    .row-width1 button{
+        background-color: #005082;
+        color:#fff;
+        border:1px solid #fff;
+        width: fit-content;
+    }
+    .row-width1 button:hover{
+        cursor: pointer;
+        background-color: #fff;
+        color:#005082;
+        border:1px solid #fff;
+    }
+    .padd-btm{
+        /* padding-bottom: 50px; */
+        padding-bottom: 70px;
+    }
+    .row-width1 h6{
+        color:#fff;
+        font-weight: normal;
+        text-transform: inherit;
+    }
+    .row-width1 h5{
+    color:#fff;
+    }
+    .mob-view-head,.row-width3{
+        display: none !important;
+    }
+    .headi-des h1{
+        margin-bottom: 40px;
+    }
+    .row-width1 h6{
+        color:#fff;
+    }
+}
+h1,h2,h3,h4,h5,h6,p{
+    /* font-family: 'Crete Round', serif !important; */
+    /* font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif !important; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif !important;
+    /* font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important; */
+}

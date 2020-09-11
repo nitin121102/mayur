@@ -1,0 +1,90 @@
+<app-pr-header></app-pr-header>
+
+<div class="section1">
+    <div class="container">
+        <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                <h6>{{ usern}} {{ userl}}, you are signed in.</h6>
+            </div>
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="section2">
+    <div class="container" fxLayout="column">
+        <h6>Student Medico Journalist - Wing - {{ college}}</h6>
+        <div class="head-block" fxLayout.lt-md="row wrap" fxLayout.gt-sm="row" fxLayout="row">
+            <h6 class="head-bg"><a [routerLink]="['/questionaire']">Questionnaire</a></h6>
+            <h6 class="head-bg"><a [routerLink]="['/personal-details']">Personal Information</a></h6>
+            <h6 class="head-bg1"><a href="#">Prescreening Questionnaire</a></h6>
+            <!-- <h6 class="head-bg"><a href="#">DIVERSITY FORM</a></h6>
+            <h6 class="head-bg"><a href="#">REVIEW AND SUBMIT</a></h6> -->
+        </div>
+        <br>
+        <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutGap.lt-sm="15px" fxLayoutGap.gt-xs="15px">
+            <button mat-flat-button>save and continue</button>
+            <!-- <button mat-flat-button>save as draft</button> -->
+        </div>
+    </div>
+</div>
+
+<div class="section3">
+    <div class="container">
+        <form role="form" (ngSubmit)="questionaire()" #f="ngForm" novalidate class="example-form">
+        <h6><b>PRESCREENING QUESTIONNAIRE</b></h6>
+        <p>Mandatory fields are marked with an asterisk.<span style="color:red;">*</span></p>
+        <p><b>To help us better know you and further assess your qualifications for this position, please answer the following questions as accurately as possible.
+        </b></p>
+        <!-- <div class="que1">
+            <p><span style="color:red;"><sup>*</sup></span>A requirement of this position is to live within 50 miles of the college/university listed in the job title, do you fulfil this requirement?</p>
+            <mat-radio-group aria-label="Select an option" fxLayout="column">
+                <mat-radio-button value="1">Yes</mat-radio-button>
+                <mat-radio-button value="2">No</mat-radio-button>
+            </mat-radio-group>              
+        </div> -->
+        <div class="que1">
+            <p><span style="color:red;"><sup>*</sup></span>1. What is your current college status?</p>
+            <mat-radio-group aria-label="Select an option" fxLayout="column"  [(ngModel)]="model.education_level" name="education_level" required>
+                <mat-radio-button value="1st Year">1st year / Freshman</mat-radio-button>
+                <mat-radio-button value="2nd Year">2nd year / Sophomore</mat-radio-button>
+                <mat-radio-button value="3rd Year">3rd year / Junior</mat-radio-button>
+                <mat-radio-button value="4th Year">4th year / Senior</mat-radio-button>
+                <mat-radio-button value="None">None of the above</mat-radio-button>
+            </mat-radio-group>              
+        </div>
+        <div class="que1">
+            <p><span style="color:red;"><sup>*</sup></span>2. What is your most fluent language?</p>
+            <mat-radio-group aria-label="Select an option" fxLayout="column"  [(ngModel)]="model.fluent_language" name="fluent_language" required>
+                <mat-radio-button value="English">English</mat-radio-button>
+                <mat-radio-button value="Hindi">Hindi</mat-radio-button>
+                <mat-radio-button value="other">Other</mat-radio-button>
+            </mat-radio-group>              
+        </div>
+        
+        <div class="que1">
+            <p><span style="color:red;"><sup>*</sup></span>3. How many hours can you work per week?</p>
+            <mat-radio-group aria-label="Select an option" fxLayout="column"   [(ngModel)]="working_hours" name="working_hours" required>
+                <mat-radio-button value="<15hours">< 15 hours </mat-radio-button>
+                <mat-radio-button value="15-30hours"> 15-30 hours</mat-radio-button>
+                <mat-radio-button value=">30hours">> 30 hours</mat-radio-button>
+            </mat-radio-group>              
+        </div>
+        
+        <div class="que1">
+            <p><span style="color:red;"><sup>*</sup></span>4. Why do you think you are suitable for this position?</p>
+            <textarea id="message" name="review" rows="2" cols="25" [(ngModel)]="model.message" name="message" required></textarea>
+        </div>
+        <div class="que1">
+            <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutGap.lt-sm="15px" fxLayoutGap.gt-xs="15px">
+                <button mat-flat-button (click)="questionaire()">save and continue</button>
+               
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+<br>
+<br>

@@ -1,0 +1,100 @@
+<app-pr-header></app-pr-header>
+
+
+<script>
+        function myFunction() {
+          var x = document.getElementById("myFile").required;
+        }
+</script>
+
+<style>a { color: inherit; } </style>
+
+<div class="banner-upload-space" >
+     <div class="container">
+           <div fxLayout="row">
+            <div fxFlex.lt-sm="0%" fxFlex.gt-xs="20"></div>
+            <div fxFlex.lt-sm="100%" fxFlex.gt-xs="60%">
+                   <mat-card class="mat-form">
+                       <h2>Ready to advertise?</h2>               
+                       <form role="form" (ngSubmit)="register()" #f="ngForm" novalidate class="example-form">
+                        <!-- <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="15px">
+                            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%"> -->
+                                <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="15px">
+                        <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                        <mat-form-field  class="example-full-width">
+                            <input matInput type="text" name="firstname" id="firstname"  placeholder="First Name" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.firstname"
+                                   #username="ngModel" required >
+                            <mat-error *ngIf="emailFormControl.hasError('required')">
+                                First Name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                        <mat-form-field  class="example-full-width">
+                            <input matInput type="text" name="lastname" id="lastname"  placeholder="Last Name" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.lastname"
+                                   #username="ngModel" required >
+                            <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Last Name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <!-- </div> -->
+                        </div>
+                    
+                            </div>
+                               <!-- <p >You have {{ 5000-model.description.length }} characters left</p><br> -->
+                           <!-- </div>
+                        </div> -->
+                        <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="15px">
+                            <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                            <mat-form-field  class="example-full-width">
+                                <input matInput type="text" name="comapany" id="comapnay"  placeholder="Company Name" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.company"
+                                       #username="ngModel" required >
+                                <mat-error *ngIf="emailFormControl.hasError('required')">
+                                    Company Name is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                                <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                            <mat-form-field  class="example-full-width">
+                                <input matInput type="text" name="job_title" id="job_title"  placeholder="Job Title" style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.job_title"
+                                       #username="ngModel" required >
+                                <!-- <mat-error *ngIf="emailFormControl.hasError('required')">
+                                Last Name is <strong>required</strong>
+                                </mat-error> -->
+                            </mat-form-field>
+                            <!-- </div> -->
+                            </div>
+                        
+                                </div>
+                                <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="15px">
+                                    <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                                        <mat-form-field  class="example-full-width">
+                                  
+                                            <input matInput type="text" name="email" id="email"  placeholder="Email"  style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.email" #email="ngModel" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                                            <mat-error *ngIf="emailFormControl.hasError('required')">
+                                                Valid email address is <strong>required</strong>
+                                            </mat-error>
+                                        </mat-form-field>
+                                </div>
+                                        <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+                                            <mat-form-field class="example-full-width">
+                                                <mat-label>Mobile No</mat-label>
+                                                <input matInput type="number" name ="mobile" id="mobile" placeholder="Mobile No." style="box-shadow:none;border:0;background:transparent" [(ngModel)]="model2.mobile" #mobile="ngModel" pattern="[1-9]{1}[0-9]{9}" maxlength="10" required>
+                                            <!-- </mat-form-field> -->
+                                    </mat-form-field>
+                                    <!-- </div> -->
+                                    </div>
+                                
+                                        </div>
+                            
+                       </form>
+                   </mat-card>
+               </div>
+               <div fxFlex.lt-sm="0%" fxFlex.gt-xs="20%"></div>
+           </div>
+     </div>
+</div>
+<!-- </div> -->
+
+
+

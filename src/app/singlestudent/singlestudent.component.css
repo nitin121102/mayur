@@ -1,0 +1,32 @@
+.head{
+    font-size:16px;
+    font-weight:bold;
+    text-transform: capitalize;
+}
+ 
+    .para{
+    font-size:16px;font-weight:bold;color:gray
+}
+.details h4{
+    color: #24305e;
+    text-align: center;
+    font-weight: bold;
+}
+.details ul{
+    padding:0px;
+}
+.mat-card{
+    border:1px solid #ccc;
+    padding:0px;
+}
+ul li:nth-child(even) { 
+    background: #f1f1f1; 
+}
+.details ul li{
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    list-style-type: none;
+}
+p{
+    margin:0px;
+}

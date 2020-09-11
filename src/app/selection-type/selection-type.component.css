@@ -1,0 +1,108 @@
+.icon-section {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #f8f8f8;
+    text-align: center;
+    line-height: 150px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    border: 10px solid #fff;
+}
+.icon-section:hover{
+    background:#3f51b5;
+    color:#fff;
+}
+.icon-section i:hover{
+    color:#fff;
+}
+.icon-section i{
+    font-size:32px;
+}
+.pad-top-btm{
+    padding:60px 0px;
+}
+.login{
+    font-size:24px;
+    color:#000;
+    text-align:center;
+    background:#f8f8f8;
+    padding:5px;
+    margin-bottom: 20px;
+}
+
+
+
+.example-form {
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+.header{
+    height: 49px;
+    border-bottom: 1px solid #ccc;
+}
+.sign-up{
+    font-size:22px;
+    text-align:center;
+    background: #f8f8f8;
+    padding:5px;
+}
+.mar-top-bottom{
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+mat-card{
+    padding:10px!important;
+}
+
+p{
+    margin-bottom:0px
+}
+/*.header{*/
+/*    height: 49px;*/
+/*    border-bottom: 1px solid #ccc;*/
+/*}*/
+.banner{
+    background:#f8f8f8;
+    padding:200px 0px;
+}
+.banner p{
+    margin-top:25px;
+    font-size:20px;
+}
+.banner h2{
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 48px
+}
+@media (max-width:768px){
+    .banner h2 {
+        font-size: 21px;
+        color: #000;
+        margin-bottom: 48px;
+    }
+    .icon-section {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        background: #f8f8f8;
+        text-align: center;
+        line-height: 120px;
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+        border: 10px solid #fff;
+    }
+    .banner p {
+        margin-top: 6px!important;
+        font-size: 20px;
+        margin-bottom: 42px;
+    }
+    .banner {
+        background: #f8f8f8;
+        padding: 100px 0px;
+        margin-bottom: 30px;
+    }
+}
+a {
+    color: #3F51B5;}

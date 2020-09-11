@@ -1,0 +1,198 @@
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Demo 1
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+.demo-1 .main .container {
+  padding: 0 400px 0 0;
+  overflow: hidden;
+}
+
+.demo-1 .content {
+  float: left;
+  width: 100%;
+  background-color: #fff;
+}
+
+.demo-1 .sidebar {
+  float: right;
+  margin-right: -370px;
+  width: 340px;
+  background-color: #f1f1f1;
+  padding: 30px;
+  box-shadow: inset 25px 0px 25px -25px #dddddd;
+  -moz-box-shadow: inset 25px 0px 25px -25px #dddddd;
+  -webkit-box-shadow: inset 25px 0px 25px -25px #dddddd;
+}
+
+.demo-1 .content,
+.demo-1 .sidebar {
+  padding-bottom: 99999px;
+  margin-bottom: -99999px;
+}
+
+.demo-1 section,
+.demo-1 aside {
+
+}
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Demo 2
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+.demo-2 .main .container {
+  padding: 0 360px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-2 .content {
+  float: left;
+  width: 100%;
+  background-color: #fff;
+}
+
+.demo-2 .sidebar {
+  float: right;
+  margin-right: -330px;
+  width: 300px;
+  background-color: #fff;
+}
+
+.demo-2 .content:after,
+.demo-2 .sidebar:after {
+  display: block;
+  position: absolute;
+  height: 100%;
+  content: "";
+  background-color: #fff;
+}
+
+.demo-2 .content:after {
+  left: 30px;
+  right: 360px;
+}
+
+.demo-2 .sidebar:after {
+  right: 30px;
+  width: 300px;
+}
+
+.demo-2 section,
+.demo-2 aside {
+  padding: 30px
+}
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Demo 3
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+.demo-3 .main .container {
+  padding: 0 0
+}
+
+.demo-3 .table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 30px 0;
+}
+
+.demo-3 .row {
+  display: table-row
+}
+
+.demo-3 .col {
+  display: table-cell;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.demo-3 .col.sidebar {
+  width: 300px
+}
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Media Queries
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+@media all and (max-width: 767px) {
+  /* demo 1 */
+  .demo-1 .main .container {
+    padding: 0 30px;
+    overflow: visible;
+  }
+
+  .demo-1 .content {
+    float: none
+  }
+
+  .demo-1 .sidebar {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .demo-1 .content,
+  .demo-1 .sidebar {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+
+  .demo-1 .content {
+    margin-bottom: 30px
+  }
+
+  /* demo 2 */
+  .demo-2 .main .container {
+    padding: 0 30px;
+    overflow: visible;
+  }
+
+  .demo-2 .content {
+    float: none;
+    margin-bottom: 30px;
+  }
+
+  .demo-2 .sidebar {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .demo-2 .content:after,
+  .demo-2 .sidebar:after {
+    display: none
+  }
+
+  /* demo 3 */
+  .demo-3 .main .container {
+    padding: 0 30px
+  }
+
+  .demo-3 .table {
+    display: block
+  }
+
+  .demo-3 .row {
+    display: block
+  }
+
+  .demo-3 .col {
+    display: block
+  }
+
+  .demo-3 .col.content {
+    margin-bottom: 30px
+  }
+
+  .demo-3 .col.sidebar {
+    width: 100%
+  }
+
+  .demo-1 .main .container {
+    padding: 0;
+  }
+}

@@ -1,0 +1,152 @@
+<!-- <header class="header" *ngIf="!login">
+    <div class="container">
+        <div fxLayout="row">
+            <div fxFlex="20" fxFlex.lt-md="60">
+                
+                <span style="font-size:22px;color:#005082;">KnowledgeNetwork</span>
+            </div>
+            <div fxFlex="80" fxFlex.lt-md="40" align="right">
+            <button id="register" [routerLink]="['/register']" mat-stroked-button color="primary" >Register</button>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="header" *ngIf="login">
+    <div class="container">
+        <div fxLayout="row">
+            <span class="w3-xxlarge"><i class="fa fa-bar"></i></span>
+            
+            <div fxFlex="10" fxFlex.lt-md="20" fxLayout="column">
+                <img src="/assets/bars.png" style="width: 32px;height: 32px !important;" (click)="openNav()"/>
+               
+            </div>
+                <div fxFlex="10" fxFlex.lt-md="30" fxLayout="column">
+                <span style="font-size:20px;color:#005082;">KnowledgeNetwork</span>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+                <a href="#">About Us</a>
+                <p style="font-size:30px; color:black; padding-left: 5px;"><b>Formats</b></p>
+                <a href="#">Images</a>
+                <a href="#">Videos</a>
+                <a href="#">Audios</a>
+                <a href="#">Text</a>
+              </div>
+            <div fxFlex="80" align="right" fxFlex.lt-md="50">
+
+                  <div class="profile-part-head">
+                    <img id="dp" src="/assets/user-profile.png" class="profile-pic"/><span  [matMenuTriggerFor]="menu">&nbsp;<i class="fa fa-angle-down"  aria-hidden="true" ></i></span>
+
+                <mat-menu #menu="matMenu">
+                    <a [routerLink]="['/']" ><button id="home" mat-menu-item><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</button></a> 
+                    <a [routerLink]="['/author-dashboard']" ><button id="home" mat-menu-item><img src="https://storage.googleapis.com/web-assets/footer/doc1.png" style="width:12px;">&nbsp;My Dashboard</button></a> 
+                    <a [routerLink]="['/your-profile']"><button id="profile" mat-menu-item><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile</button></a>
+                    <a [routerLink]="['/myposts/']+id" ><button id="posts" mat-menu-item><i class="fa fa-database" aria-hidden="true"></i>&nbsp;My Posts</button></a>
+                    <a [routerLink]="['/mydrafts/']+id"><button id="drafts" mat-menu-item><i class="fa fa-folder-open-o" aria-hidden="true"></i>&nbsp;My Drafts</button></a>
+                    <button mat-menu-item id="logout" (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;Logout</button>
+                </mat-menu>
+                  </div>
+            </div>
+        </div>
+    </div>
+</header> -->
+
+<header class="fixed-nav" *ngIf="!login">
+    <div class="block2">
+      <div class="container">
+          <div fxLayout="row">
+              <div fxFlex.lt-md="50%" fxFlex.gt-sm="50%" fxLayoutAlign="start center">
+                  <a href="https://editorial.therightdoctors.com"><h5 style="margin:0px;font-weight: bold;">Mayur</h5></a>
+              </div>
+              
+              <div fxFlex.lt-md="50%" fxFlex.gt-sm="50%" fxLayoutAlign="end" class="desk-get" fxLayout="row" fxLayoutGap.gt-sm="10px">
+                  <div fxLayoutAlign="end" fxLayout="row" fxLayoutGap.lt-sm="8px" fxLayoutGap.gt-xs="16px">
+                <button id="register" mat-flat-button [routerLink]="['/login']" style="color: #424242;">Login</button>
+                <button id="register" mat-flat-button [routerLink]="['/register']">Register</button>
+              </div>
+              </div>
+  
+          </div>
+      </div>
+  </div>
+  
+  </header>
+  <header class="fixed-nav" *ngIf="login">
+  <div class="block2">
+    <div class="container">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex.lt-md="60%" fxFlexOrder.lt-md="2" fxFlex.gt-sm="20%" fxLayoutAlign="start center">
+              <a href="https://editorial.therightdoctors.com"><h5 style="font-weight: bold;">EDITORIAL</h5></a>
+            </div>
+            <div fxFlexOrder.lt-md="1" fxFlex.lt-md="10%" fxFlex.gt-sm="70%" fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="center center">
+                <div fxLayout="column" class="mob-nav" fxLayoutAlign.lt-md="center center">
+                    <button mat-button [matMenuTriggerFor]="menuone" style="min-width: 30px !important;padding:0px !important;">
+                        <!-- <img src="assets/hamburger-menu.webp" style="width:28px;"/> -->
+                        <span class="material-icons" style="font-size:28px;color:#fff;">
+                            menu
+                            </span>
+                    </button>
+                    <mat-menu #menuone="matMenu">
+                        <div fxLayout="row" class="section" fxLayoutAlign="end" style="padding:10px 10px 0px 0px !important;">
+                            <img src="https://storage.googleapis.com/web-assets/social-media-icons/close.png" style="width:22px;">
+                        </div>
+                        <div fxLayout="column" style="padding:10px;" fxLayoutGap.gt-sm="20px">
+                          <h6 class="sec-head"><a [routerLink]="['/']">Home</a></h6>
+                             <h6 class="sec-head"><a [routerLink]="['/about']">About us</a></h6>
+                             <h6 class="sec-head"><a [routerLink]="['/about/']">Careers</a></h6>
+                             <!-- <h6 class="sec-head"><a href="">Imprint</a></h6> -->
+                             <h6 class="sec-head"><a [routerLink]="['/formats/images']">Images</a></h6>
+                             <h6 class="sec-head"><a [routerLink]="['/formats/audios']">Audios</a></h6>
+                             <h6 class="sec-head"><a [routerLink]="['/formats/videos']">Videos</a></h6>
+                             <!-- <h6 class="sec-head"><a [routerLink]="['/packages']">Pricing</a></h6> -->
+                             <!-- <h6 class="sec-head"><a [routerLink]="['/packages']">Pricing</a></h6> -->
+                             <!-- <h6 ><a href="#">Audio</a></h6> -->
+                        </div>
+                    </mat-menu>
+                </div>
+                <ul fxLayout="row" class="desk-nav">
+                  <li><a [routerLink]="['/']">Home</a></li>
+                    <li><a [routerLink]="['/about']">About us</a></li>
+                    <li><a [routerLink]="['/about']">Careers</a></li>
+                    <!-- <li><a href="#">Imprint</a></li> -->
+                    <li><a [routerLink]="['/formats/images']">Images</a></li>
+                    <li><a [routerLink]="['/formats/audios']">Audios</a></li>
+                    <li><a [routerLink]="['/formats/videos']">Videos</a></li>
+                    <!-- <li><a [routerLink]="['/packages']">Pricing</a></li> -->
+                    <!-- <li><a [routerLink]="['/packages']">Pricing</a></li> -->
+                    <!-- <li><a href="#">Login</a></li> -->
+                </ul>
+  
+            </div>
+            <div fxFlexOrder.lt-md="3" fxFlexOrder.gt-sm="3" fxFlex.lt-md="30%" fxFlex.gt-sm="10%" fxLayoutAlign="end" class="desk-get" fxLayoutAlign="end">
+              <div class="profile-part-head" fxLayoutAlign.gt-sm="end">
+                <!-- <img id="dp" src="/assets/user-profile.png" class="profile-pic"/> -->
+                <button mat-flat-button [matMenuTriggerFor]="menu" style="background-color: transparent;"><span class="material-icons" style="font-size:30px;color:#fff;">
+                    account_circle
+                    </span><span class="material-icons" style="color:#fff;">
+                        expand_more
+                        </span></button>
+                <!-- <span class="material-icons" style="font-size:30px;color:#fff;">
+                    account_circle
+                    </span>
+                <span  [matMenuTriggerFor]="menu">&nbsp;<i class="fa fa-angle-down"  aria-hidden="true" style="color:#fff;"></i></span> -->
+  
+            <mat-menu #menu="matMenu">
+                <a [routerLink]="['/']" ><button id="home" mat-menu-item><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</button></a> 
+                <a [routerLink]="['/author-dashboard']" ><button id="home" mat-menu-item><img src="https://storage.googleapis.com/web-assets/footer/doc1.png" style="width:12px;">&nbsp;My Dashboard</button></a> 
+                <a [routerLink]="['/your-profile']"><button id="profile" mat-menu-item><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile</button></a>
+                <a [routerLink]="['/myposts/']+id" ><button id="posts" mat-menu-item><i class="fa fa-database" aria-hidden="true"></i>&nbsp;My Posts</button></a>
+                <a [routerLink]="['/mydrafts/']+id"><button id="drafts" mat-menu-item><i class="fa fa-folder-open-o" aria-hidden="true"></i>&nbsp;My Drafts</button></a>
+                <button mat-menu-item id="logout" (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;Logout</button>
+            </mat-menu>
+              </div>
+            </div>
+  
+        </div>
+    </div>
+  </div>
+  
+         
+  
+  </header>
+  

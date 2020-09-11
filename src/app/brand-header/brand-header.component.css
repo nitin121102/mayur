@@ -1,0 +1,22 @@
+.header{
+    height:50px;
+}
+
+.profile-pic {
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+}
+.profile-part-head{
+    width:160px;
+
+}
+@media(max-width:768px){
+    .profile-part-head{
+        width: 65px;
+    }
+}
+a{
+    color:#000;
+    text-decoration: none;
+}

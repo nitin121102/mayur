@@ -1,0 +1,260 @@
+<app-pr-header></app-pr-header>
+<form role="form" (ngSubmit)="recommend(one.id)" #f="ngForm" novalidate class="example-form">
+<div class="promotion">
+    <div class="container">
+        <div fxLayout="column" class="box-shadows">
+        <div fxLayout="row">  
+            <div fxFlex.lt-md="0%" fxFlex.gt-sm="5%"></div>
+            <div fxLayout.lt-sm="column" fxLayout.lt-md="row wrap" fxLayout.gt-sm="row" fxFlex.lt-md="100%" fxFlex.gt-sm="90%">
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column1">
+                    <div class="columnone-one">
+                        <p class="title">Price $ 20</p>
+                        <p style="font-size:16px;">Select Category</p>
+			<div>                          
+                            <ul>
+  			    	<li>
+					<mat-checkbox (change)="myFunction1($event,1)">>80 articles/month</mat-checkbox> 
+				</li>
+                                <li> <mat-checkbox (change)="myFunction1($event,2)">40-80 articles/month</mat-checkbox> </li>
+                                <li> <mat-checkbox (change)="myFunction1($event,3)">10-40 articles/month</mat-checkbox> </li>
+                                <li> <mat-checkbox (change)="myFunction1($event,4)"> < 10 artices/month </mat-checkbox> </li>
+                            </ul>
+                      </div> 
+		  </div>
+		</div>
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column2">
+                    <div class="columntwo-one">
+                        <p class="title">Rapid Express</p>
+                        <p style="font-size:16px;">(Select any one)</p>
+                        <div>
+                            <!-- <div><h5 class="heading1">Threee ways to publish</h5></div> -->
+                            <ul>
+                                <li><mat-checkbox (change)="myFunction2($event,1)">Podcast</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction2($event,2)">Social media</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction2($event,3)">Website</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction2($event,4)">Podcast</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction2($event,5)">Social media</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction2($event,6)">Website</mat-checkbox></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column3">
+                    <div class="columnthree-one">
+                        <p class="title">Price $ 20</p>
+                        <p style="font-size:16px;">(Select any one)</p>
+                        <div>
+                            <!-- <div><h5 class="heading1">Website1</h5></div> -->
+                            <ul>
+                                <li><mat-checkbox (change)="myFunction3($event,1)">Live streaming</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction3($event,2)">Live updates</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction3($event,3)">Live streaming</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction3($event,4)">Live updates</mat-checkbox></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column4">
+                    <div class="columnfour-one">
+                        <p class="title">Price $ 20</p>
+                        <p style="font-size:16px;">(Select any one)</p>
+                        <div>
+                            <!-- <div><h5 class="heading1">Website1</h5></div> -->
+                            <ul>
+			    <li><mat-checkbox (change)="myFunction4($event,1)">Within 7 days</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction4($event,2)">Within 3 days</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction4($event,3)">Within 24 hours</mat-checkbox></li>
+                                <li><mat-checkbox (change)="myFunction4($event,4)">Within 3 hours</mat-checkbox></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div fxFlex.lt-md="0%" fxFlex.gt-sm="5%"></div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <button mat-flat-button style="background-color: #ff5a5f;color:#fff;font-weight: bold;" (click)="recommend()">Recommended</button>
+        </div>
+    </div>
+    </div>
+</div>
+</form>
+
+<div class="inputs" style="padding:30px 20px;background-color:#ff5a5f;">
+    <div fxLayoutAlign="center center">
+        <div class="example-container">
+
+          <form class="example-form" fxLayoutGap="15px" fxLayoutAlign="center center" fxLayout.lt-md="column" fxLayout.gt-sm="row wrap">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Telephone</mat-label>
+              <span matPrefix>+91 &nbsp;</span>
+              <input type="tel" matInput placeholder="555-555-1234">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+            <button mat-flat-button>PUBLISH MY BOOK</button>
+          </form>
+          
+        </div>
+    </div>
+</div>
+<div class="promotion">
+    <div class="container">
+        <div fxLayout="row">
+        <!-- <div fxLayout.lt-sm="column" fxLayout.lt-md="row wrap"> -->
+            <div fxFlex.lt-md="0%" fxFlex.gt-sm="5%"></div>
+            <div fxLayout.lt-sm="column" fxLayout.lt-md="row wrap" fxLayout.gt-sm="row" fxFlex.lt-md="100%" fxFlex.gt-sm="90%">
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column1">
+			    <label #one id="one"> </label>
+                    <div class="columnone-one">
+                        <div class="columnone-two">
+                            <p class="title1">start-up</p>
+
+                            <p class="title">Our book experts will design and publish a beautiful paperback book, which you can sell across the country</p>
+                        </div>
+                        <div>
+                            <div fxLayoutAlign="end" class="gst"><h5 class="heading1">+GST</h5></div>
+                            <div><h4 class="price">39,000$</h4></div>
+                            <div><h4 class="price">39,000$</h4></div>
+                            <div class="title3">
+                                <h5>NO cost emi starts at
+                                <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" style="text-decoration: underline;">Options</button>
+                                <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                                </mat-menu></h5>
+                            </div>
+                            <ul class="list">
+                                <li class="title2">All services in BOOTSTRAP plus:
+                                </li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li> 
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                            </ul>
+                            <div fxLayoutAlign="center center" class="start-btn"><button mat-flat-button>START NOW</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column2">
+			    <label #one id="two"> </label>
+                    <div class="columntwo-one">                        
+                        <div class="columntwo-two">
+                            <p class="title1">start-up</p>
+                            <p class="title">Our book experts will design and publish a beautiful paperback book, which you can sell across the country</p>
+                        </div>
+                        <div>
+                            <div fxLayoutAlign="end" class="gst"><h5 class="heading1">+GST</h5></div>
+                            <div><h4 class="price">39,000$</h4></div>
+                            <div><h4 class="price">39,000$</h4></div>
+                            <div class="title3">
+                                <h5>NO cost emi starts at
+                                <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" style="text-decoration: underline;">Options</button>
+                                <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                                </mat-menu></h5>
+                            </div>
+                            <ul class="list">
+                                <li class="title2">All services in BOOTSTRAP plus:
+                                </li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li> 
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                            </ul>
+                            <div fxLayoutAlign="center center" class="start-btn"><button mat-flat-button>START NOW</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column3">
+			    <label #one id="three"> </label>
+                    <div class="columnthree-one">                        
+                        <div class="columnthree-two">
+                            <p class="title1">start-up</p>
+                            <p class="title">Our book experts will design and publish a beautiful paperback book, which you can sell across the country</p>
+                        </div>
+                        <div>
+                            <div fxLayoutAlign="end" class="gst"><h5 class="heading1">+GST</h5></div>
+                            <div><h4 class="price">39,000$</h4></div>
+                            <div><h4 class="price">39,000$</h4></div>
+                            <div class="title3">
+                                <h5>NO cost emi starts at
+                                <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" style="text-decoration: underline;">Options</button>
+                                <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                                </mat-menu></h5>
+                            </div>
+                            <ul class="list">
+                                <li class="title2">All services in BOOTSTRAP plus:
+                                </li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li> 
+                                <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                            </ul>
+                            <div fxLayoutAlign="center center" class="start-btn"><button mat-flat-button>START NOW</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.gt-sm="25%" class="column4">
+			    <label #one id="four"> </label>
+                    <div class="columnfour-one">
+                        <div class="columnfour-two">
+                            <p class="title1">start-up</p>
+                        <p class="title">Our book experts will design and publish a beautiful paperback book, which you can sell across the country</p>
+                     </div>
+                     <div>
+                        <div fxLayoutAlign="end" class="gst"><h5 class="heading1">+GST</h5></div>
+                        <div><h4 class="price">39,000$</h4></div>
+                        <div><h4 class="price">39,000$</h4></div>
+                        <div class="title3">
+                            <h5>NO cost emi starts at
+                            <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" style="text-decoration: underline;">Options</button>
+                            <mat-menu #menu="matMenu">
+                            <button mat-menu-item>Item 1</button>
+                            <button mat-menu-item>Item 2</button>
+                            </mat-menu></h5>
+                        </div>
+                        <ul class="list">
+                            <li class="title2">All services in BOOTSTRAP plus:
+                            </li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li> 
+                            <li><span class="material-icons" style="font-size:12px;font-weight: bold;padding-right: 10px;">done</span>Publish a paperback and hardcover version of your book</li>
+                        </ul>
+                        <div fxLayoutAlign="center center" class="start-btn"><button mat-flat-button>START NOW</button></div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+            <div fxFlex.lt-md="0%" fxFlex.gt-sm="5%"></div>
+        </div>
+    </div>
+</div>

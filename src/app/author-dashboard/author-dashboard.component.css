@@ -1,0 +1,84 @@
+.layer1 i{
+    font-size: 35px;
+    color:gray;
+}
+.para1{
+    font-size:14px;
+    color:#999;
+}
+.para2{
+    font-size: 20px;
+    color:#333;
+}
+.para1,.para2,.start1 h5,.start1 i,.earn1 h5,.earn1 i{
+    padding-bottom:5px;
+}
+.start1 .para2,.start1 h5,.start1 .material-icons{
+    color:#fff;
+}
+.layer1 p,h5{
+    margin:0px;
+}
+.one{
+    padding: 10px;
+    border:1px solid #f2f2f2;
+}
+.start1{
+    background-color: #24305e;
+}
+.start1 i,.start1 h5,.start1 p,.earn1 i,.earn1 h5,.earn1 p{
+    color:#fff;
+    text-align: center;
+}
+.start1:hover{
+    background-color: #fff;
+    border:1px solid #24305e;
+}
+.start1:hover i,.start1:hover h5,.start1:hover .para2,.start1:hover .material-icons{
+    color: #24305e !important;
+}
+.earn1{
+    background-color: #424242;
+}
+.earn1:hover i,.earn1:hover h5,.earn1:hover p{
+    color:#424242;
+}
+.earn1:hover{
+    background-color: #fff;
+    border:1px solid #999;
+}
+.earn1,.start1{
+    padding:20px;
+}
+.lastbtns button{
+    background-color: #24305e;
+    color:#fff;
+}
+.lastbtns{
+    margin:20px 0px;
+}
+@media(max-width:600px){
+    .lastbtn1{
+        margin-bottom: 15px;
+    }
+    .layer1{
+        padding-top:70px;
+    }
+}
+@media(min-width:600px){
+    .one{
+        padding: 30px;
+    }
+    .layer1{
+        padding-top:100px;
+    }
+}
+.mat-dialog-container{
+    padding: 10px !important;
+}
+/* @media(max-width:600px){
+::ng-deep .cdk-overlay-container .cdk-overlay-backdrop .cdk-global-overlay-wrapper .cdk-overlay-pane,::ng-deep .cdk-overlay-container .cdk-overlay-backdrop .cdk-global-overlay-wrapper .cdk-overlay-pane .mat-dialog-container{
+    max-width:100% !important;
+    height:700px !important;
+}
+} */

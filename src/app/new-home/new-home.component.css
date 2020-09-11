@@ -1,0 +1,537 @@
+.background-banner{
+    background-image: url("../../assets/new-img-banner.jpg");
+    background-size: cover;
+    position: relative;
+}
+.layer{
+    padding-top: 10px;
+    background: rgba(0, 12, 76, 0.67);
+    height: 700px;
+    /*padding: 200px 0px;*/
+}
+.login{
+    border-color: #fff;
+    color: #fff;
+    margin-top: 18px;
+    padding: 1px 24px;
+}
+.background-banner h2{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 19px
+}
+.background-banner h1{
+  font-size:100px;
+    font-weight:600;
+    text-align: center;
+    color:#fff;
+}
+.content-kick{
+    padding:130px 0px;
+text-align: center;
+}
+
+.icon-down-arrow{
+    height: 60px;
+    width: 60px;
+    margin: 0px auto;
+    background: rgba(0, 0, 0, 0.7294117647058823);
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    line-height: 60px;
+    position: absolute;
+    z-index: 999;
+    left: 48%;}
+
+.trd-about-back{
+    background-image: url("../../assets/studentsgroup.jpg");
+    background-size: cover;
+    position: relative;}
+.trd-about-back-3{
+    background-image: url("../../assets/benfits.jpg");
+    background-size: cover;
+    position: relative;}
+.trd-layer{
+    padding:150px 0px;
+    /*background: rgba(0, 0, 0, 0.74);*/
+    /*padding: 200px 0px;*/
+   background:linear-gradient(to right, #000 0%, #4c619869 100%);
+}
+.trd-layer-3{
+    padding:150px 0px;
+    /*background: rgba(0, 0, 0, 0.74);*/
+    /*padding: 200px 0px;*/
+    background:linear-gradient(to right, #000 0%, #4c619869 100%);
+}
+.trd-layer h2{
+    color:#fff;
+    font-size:30px;
+    font-weight:600;
+    text-align: left;
+}
+.trd-layer-3 h2{
+    color:#fff;
+    font-size:30px;
+    font-weight:600;
+    text-align: left;
+}
+.trd-layer p{
+    color:#fff;
+    font-size:18px;
+    text-align: left;
+    line-height:35px;
+}
+.trd-layer-3 p{
+    color:#fff;
+    font-size:18px;
+    text-align: left;
+    line-height:35px;
+}
+.trd-layer-2{
+    padding:170px 0px;
+    background:linear-gradient(to left, #000 0%, #dadadc3b 100%);
+}
+.trd-about-back-2{
+    background-image: url("../../assets/new-banner-requirements.jpg");
+    background-size: cover;
+    position: relative;
+}
+.trd-layer-2 h2{
+    color:#fff;
+    font-size:30px;
+    font-weight:600;
+
+}
+.trd-layer-2 p{
+    color:#fff;
+    font-size:18px;
+    text-align: right;
+    line-height:35px;
+}
+
+.intro{
+    text-align: center;
+    padding: 50px 50px;
+    /*background-image: url("../../assets/inrto.jpg");*/
+    /*background-size: cover;*/
+}
+
+.intro h2{
+    color: #f44335;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 27px;
+    font-weight: 600;
+
+}
+.intro p{
+    line-height:28px;
+    font-size:15px;
+}
+.list-brand li{
+    list-style-type: disc;
+    line-height:36px;
+    color:#fff;
+    font-size:17px;
+}
+
+.list-brand{
+    padding-left:15px;
+}
+.list-brand-right{
+    padding-left:15px;
+}
+.list-brand-right li{
+    list-style-type: disc;
+    line-height:36px;
+    color:#fff;
+    font-size:17px;
+}
+/*responsive*/
+@media (max-width:599px) {
+    .content-kick {
+        padding: 30px 0px;
+        text-align: center;
+    }
+    .intro {
+        text-align: center;
+        padding: 70px 0px;
+    }
+    .trd-layer {
+        padding: 32px 0px;
+        background: linear-gradient(to right, #000 0%, #4c6198cc 100%);
+    }
+    .trd-layer h2 {
+        color: #fff;
+        font-size: 26px;
+        font-weight: 600;
+        text-align: left;
+    }
+    .trd-layer-2 h2 {
+        color: #fff;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .background-banner h1 {
+        font-size: 62px;}
+    .layer{
+        /* padding-top: 10px; */
+        background: rgba(63, 81, 181, 0.73);
+        height: 526px!important;
+    }
+}
+
+
+
+/*old compononent css*/
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+.icon-section {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #f8f8f8;
+    text-align: center;
+    line-height: 150px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    border: 10px solid #fff;
+}
+.icon-section:hover{
+    background:#3f51b5;
+    color:#fff;
+}
+.icon-section i:hover{
+    color:#fff;
+}
+.icon-section i{
+    font-size:32px;
+}
+.pad-top-btm{
+    padding:60px 0px;
+}
+/*.login{*/
+/*    font-size:24px;*/
+/*    color:#000;*/
+/*    text-align:center;*/
+/*    background:#f8f8f8;*/
+/*    padding:5px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+
+a{
+    text-decoration: none;
+}
+
+
+.example-form {
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+.header{
+    height: 49px;
+    border-bottom: 1px solid #ccc;
+}
+.sign-up{
+    font-size:22px;
+    text-align:center;
+    background: #f8f8f8;
+    padding:5px;
+}
+.mar-top-bottom{
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+mat-card{
+    padding:10px!important;
+}
+
+p{
+    margin-bottom:0px
+}
+/*.header{*/
+/*    height: 49px;*/
+/*    border-bottom: 1px solid #ccc;*/
+/*}*/
+.banner{
+    background:#f8f8f8;
+    padding:75px 0px;
+}
+.banner p{
+    margin-top: 25px;
+    font-size: 20px;
+    color: #000;
+    /*font-family: 'Raleway', sans-serif*/
+}
+.banner h2{
+    font-size: 30px;
+    color: #f44335;
+    margin-bottom: 48px;
+
+}
+
+
+.test-monials-back{
+    background-repeat: no-repeat;
+    background: url(../../assets/brand-amb.jpg);
+    background-repeat-x: no-repeat;
+    background-size: cover;
+}
+
+.test-monial{
+    color:#fff;
+    text-align: center;
+    /*font-family: 'Raleway', sans-serif;*/
+    font-size:27px; margin-bottom:20px;
+    font-weight:600;
+}
+
+.layer-back{
+    padding: 100px 0px;
+    background: rgba(19, 40, 56, 0.72);
+
+}
+.img-circle{
+    border-radius:100%;
+    margin-bottom: 10px;
+    height:140px;
+    width:140px;
+}
+
+.mar-top-bap{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+.mat-points {
+    box-shadow: 0 0 20px rgba(0,0,0,.06);
+}
+.points{
+    padding-left:0px;
+}
+
+.points li{
+    width: 100%;
+    list-style-type: none;
+    line-height: 1.6rem;
+    padding: 20px 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+.points li:nth-child(even) {
+    background: #fafafa;
+}
+.ben-heading{
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    color: #3F51B5;
+    margin-bottom: 22px;
+}
+
+.main-head{
+    color:#ff0000;
+    font-size:28px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.example-form {
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+    margin-bottom: 0px!important;
+}
+.example-h2 {
+    margin: 10px;
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 40px;
+    flex-wrap: wrap;
+}
+.name-test{
+    font-family: 'Raleway', sans-serif;
+    font-weight:600;
+    text-align: center;
+    color:#fff;
+    font-size: 20px;
+}
+.example-margin {
+    margin: 0 10px;
+
+}
+.question{
+    font-weight:600;
+    color:#000;
+    font-size:13px;
+    margin-bottom:5px;
+    line-height:28px;
+}
+.list-footer li{
+    display: inline-block;
+    font-size:14px;
+    color:#f8f8f8;
+    list-style-type: none;
+    padding-right:20px;
+}
+.list-footer{
+    padding-left:0px;
+}
+
+@media (max-width:768px){
+    .main-head {
+        color: #ff0000;
+        font-size: 24px;
+    }
+    .mar-top-bap{
+        margin-top:60px;
+        clear:both;
+    }
+    .main-head{
+        margin-top:10px;
+    }
+    .points li {
+        padding: 13px;
+        line-height: 30px;
+    }
+    ben-heading {
+        font-size: 20px;
+    }
+    .carousel-control-next {
+        right: 0px!important;
+    }
+    .carousel-control-prev {
+        left: 0px!important;
+    }
+    .banner p {
+        margin-top: 8px!important;
+        font-size: 20px;
+        color: #000;
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 20px!important;
+    }
+}
+.brand-amb {
+    background: url(../../assets/brand-amb.jpg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.layer-brand{
+    padding:127px 0px 85px;
+    background: rgba(0, 0, 0, 0.57);
+}
+.main-head-brand {
+    text-align: center;
+    color:#fff;
+    font-family: 'Raleway', sans-serif;
+
+}
+.marg-n-top{
+    margin-top:100px;
+
+}
+.brand{
+    background: #f8f8f8;
+    padding: 10px;
+}
+.banner a{
+    color:#3F51B5;
+}
+.footer{
+    padding:10px 0px;
+    background:#000;
+}
+.footer ul{
+    margin-bottom: 0px;
+}
+/*testmonials*/
+/*{*/
+/*    font-family: "Open Sans", sans-serif;*/
+/*}*/
+/*h2 {*/
+/*    color: #333;*/
+/*    text-align: center;*/
+/*    text-transform: uppercase;*/
+/*    font-family: "Roboto", sans-serif;*/
+/*    font-weight: bold;*/
+/*    position: relative;*/
+/*    margin: 30px 0 60px;*/
+/*}*/
+/*h2::after {*/
+/*    content: "";*/
+/*    width: 100px;*/
+/*    position: absolute;*/
+/*    margin: 0 auto;*/
+/*    height: 3px;*/
+/*    background: #8fbc54;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: -10px;*/
+/*}*/
+.col-center {
+    margin: 0 auto;
+    float: none !important;
+}
+
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -62px!important;}
+/*.test-monials-back  p{*/
+/*    color:#fff;*/
+/*    text-align: center;*/
+/*}*/
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -54px !important;
+}
+
+
+
+@media (max-width:768px){
+    .banner {
+        background: #f8f8f8;
+        padding: 26px 0px;
+    }
+    .marg-n-top {
+        margin-top: 24px;
+    }
+    .icon-section{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: #f8f8f8;
+        text-align: center;
+        line-height: 100px;
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+        border: 7px solid #fff;
+    }
+    .icon-section i {
+        font-size: 25px;
+    }
+    .main-head-brand {
+        font-size: 24px;
+    }
+    .layer-back {
+        padding: 60px 0px!important;
+
+    }
+    .intro h2{
+        font-size: 19px;
+
+    }
+}

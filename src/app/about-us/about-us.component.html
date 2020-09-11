@@ -1,0 +1,375 @@
+
+  <!-- <header class="fixed-nav" *ngIf="!login">
+    <div class="block2">
+      <div class="container">
+          <div fxLayout="row">
+              <div fxFlex.lt-md="50%" fxFlex.gt-sm="50%" fxLayoutAlign="start center">
+                  <a href="#"><h5 style="margin:0px;">KnowledgeNetwork</h5></a>
+              </div>
+              
+              <div fxFlex.lt-md="50%" fxFlex.gt-sm="50%" fxLayoutAlign="end" class="desk-get" fxLayout="row" fxLayoutGap.gt-sm="10px">
+                <button id="register" mat-flat-button [routerLink]="['/register']" style="color: #424242;">Login</button>
+                <button id="register" mat-flat-button [routerLink]="['/register']">Register</button>
+              </div>
+  
+          </div>
+      </div>
+  </div>
+
+</header> -->
+<header class="fixed-nav">
+    <div class="block2">
+      <div class="container">
+          <div fxLayout="row" fxLayoutAlign="start center">
+              <div fxFlex.lt-md="60%" fxFlexOrder.lt-md="2" fxFlex.gt-sm="20%" fxLayoutAlign="start center">
+                  <h5><a href="/">EDITORIAL</a></h5>
+              </div>
+              <div fxFlexOrder.lt-md="1" fxFlex.lt-md="10%" fxFlex.gt-sm="70%" fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="center center">
+                  <div fxLayout="column" class="mob-nav" fxLayoutAlign.lt-md="center center">
+                      <button mat-button [matMenuTriggerFor]="menuone" style="min-width: 30px !important;padding:0px !important;">
+                          <!-- <img src="https://storage.googleapis.com/web-assets/social-media-icons/hamburger-icon.png" style="width:100%;"/> -->
+                          <span class="material-icons" style="font-size:28px;color:#fff;">
+                            menu
+                            </span>
+                      </button>
+                      <mat-menu #menuone="matMenu">
+                          <div fxLayout="row" class="section" fxLayoutAlign="end" style="padding:10px 10px 0px 0px !important;">
+                              <img src="https://storage.googleapis.com/web-assets/social-media-icons/close.png" style="width:22px;">
+                          </div>
+                          <div fxLayout="column" style="padding:10px;" fxLayoutGap.gt-sm="20px">
+                            <h6 class="sec-head"><a [routerLink]="['/']">Home</a></h6>
+                               <h6 class="sec-head"><a [routerLink]="['/about']">About us</a></h6>
+                               <!-- <h6 class="sec-head"><a (click)="scrollToElement(targetone)">Careers</a></h6>
+                               <h6 class="sec-head"><a (click)="scrollToElement(targetwo)">Imprint</a></h6> -->
+                               <!-- <h6 class="sec-head"><a href="">Images</a></h6>
+                               <h6 class="sec-head"><a href="">Videos</a></h6>
+                               <h6 class="sec-head"><a href="">Packages</a></h6>
+                               <h6><a href="#">Audio</a></h6> -->
+                               <h6 class="sec-head"><a [routerLink]="['/formats/images']">Images</a></h6>
+                               <h6 class="sec-head"><a [routerLink]="['/formats/audios']">Audios</a></h6>
+                               <h6 class="sec-head"><a [routerLink]="['/formats/videos']">Videos</a></h6>
+                               <!-- <h6 class="sec-head"><a [routerLink]="['/packages']">Pricing</a></h6> -->
+                          </div>
+                      </mat-menu>
+                  </div>
+                  <ul fxLayout="row" class="desk-nav">
+                    <li><a [routerLink]="['/']">Home</a></li>
+                      <li><a [routerLink]="['/about']">About us</a></li>
+                      <li><a (click)="scrollToElement(targetone)">Careers</a></li>
+                      <!-- <li><a (click)="scrollToElement(targetwo)">Imprint</a></li> -->
+                      <li><a [routerLink]="['/formats/images']">Images</a></li>
+                      <li><a [routerLink]="['/formats/audios']">Audios</a></li>
+                      <li><a [routerLink]="['/formats/videos']">Videos</a></li>
+                      <!-- <li><a [routerLink]="['/packages']">Pricing</a></li> -->
+                    
+                  </ul>
+  
+              </div>
+              <div fxFlexOrder.lt-md="3" fxFlexOrder.gt-sm="3" fxFlex.lt-md="30%" fxFlex.gt-sm="10%" fxLayoutAlign="end" class="desk-get" fxLayoutAlign="end">
+                <div class="profile-part-head" fxLayoutAlign.gt-sm="end" style="float:right;">
+                  <!-- <img id="dp" src="/assets/user-profile.png" class="profile-pic"/> -->
+                  <!-- <span class="material-icons" style="font-size:30px;color:#fff;">
+                    account_circle
+                    </span>
+                  <span  [matMenuTriggerFor]="menu">&nbsp;<i class="fa fa-angle-down"  aria-hidden="true" style="color:#fff;"></i></span> -->
+                  <button mat-flat-button [matMenuTriggerFor]="menu" style="background-color: transparent;"><span class="material-icons" style="font-size:30px;color:#fff;">
+                    account_circle
+                    </span><span class="material-icons" style="color:#fff;">
+                        expand_more
+                        </span></button>
+  
+              <mat-menu #menu="matMenu">
+                  <a [routerLink]="['/']" ><button id="home" mat-menu-item><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</button></a> 
+                  <a [routerLink]="['/author-dashboard']" ><button id="home" mat-menu-item><img src="https://storage.googleapis.com/web-assets/footer/doc1.png" style="width:12px;">&nbsp;My Dashboard</button></a> 
+                  <a [routerLink]="['/your-profile']"><button id="profile" mat-menu-item><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile</button></a>
+                  <a [routerLink]="['/myposts/']+id" ><button id="posts" mat-menu-item><i class="fa fa-database" aria-hidden="true"></i>&nbsp;My Posts</button></a>
+                  <a [routerLink]="['/mydrafts/']+id"><button id="drafts" mat-menu-item><i class="fa fa-folder-open-o" aria-hidden="true"></i>&nbsp;My Drafts</button></a>
+                  <button mat-menu-item id="logout" (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;Logout</button>
+              </mat-menu>
+                </div>
+              </div>
+  
+          </div>
+      </div>
+  </div>
+    
+          
+  
+  </header>
+  
+  
+  
+  
+  <div class="block1">
+    <!-- <img src="assets/kn.jpeg" style="width:100%;height:100%;"> -->
+    <div class="container">
+        <!-- <div fxLayout="row">
+            <div fxFlex.lt-sm="0%" fxFlex.lt-md="10%" fxFlex.gt-sm="15%"></div> 
+            <div fxFlex.lt-sm="100%" fxFlex.lt-md="80%" fxFlex.gt-sm="70%" fxLayout="column" fxLayout.gt-xs="center center" class="pos-text">
+                <h5>KnowledgeNetwork</h5>
+                <p style="margin-bottom: 5px;">It has never been easier to publish. Smartphones come with great cameras and sound recording. Reason why almost everybody  with a smartphone is putting out content on You Tube, Linked In , Twitter, Facebook, Instagram, WhatsApp etc. How do you stand out from the clutter.  Why do you need professional digital publishing services like TheRightDoctors.com.</p>
+            </div>
+            <div fxFlex.lt-sm="0%" fxFlex.lt-md="10%" fxFlex.gt-sm="15%"></div> 
+        </div> -->
+        <img class="cover" src="/assets/trdcover.jpg">
+    </div>
+  </div>
+  
+  
+  <div class="block4">
+    <div class="container">
+        <div fxLayout="column">
+          <!-- <div class="layer1">
+            <div class="container" style="padding:0px;">
+                <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="30px" style="height:100%;">
+                    <div fxFlex.lt-md="100%" fxFlex.gt-sm="70%" fxLayout="row" class="bg-color" fxLayoutGap.gt-xs="20px" fxFlexOrder.lt-md="1">
+                        <div fxFlex.lt-md="100%" fxFlex.gt-sm="100%" fxLayout="column" fxAlign="start start" class="inner-pad">
+                           
+                            <div class="textpad">
+                            <h4>About Us</h4>
+                            <p style="text-align: start center !important;margin-bottom: 30px;">TheRightDoctors is a medical information and news startup that gives influential decision makers a critical edge by connecting them to a dynamic network of information and insights from doctors across the world. TheRightDoctors knowledge network leveraging ML, AI, scale and digital technologies in a smartphone-driven world, amplifies the publishers content to connect and engage with relevant audience.</p>
+                            <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutGap.gt-xs="15px">
+                                <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%">
+                                    <hr style="width:30px;background-color: #fe5000;height: 3px;margin-left: 0px;">
+                                    <h5>Global Reach</h5> 
+                                    <p>Our content is accessed by audience throughout the world </p>
+                                    </div>
+                                  <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%">
+                                            <hr style="width:30px;background-color: #fe5000;height: 3px;margin-left: 0px;">
+                                            <h5>Connecting People</h5>
+                                            <p>Our platform connects various medical minds and thought leaders across the world</p>
+                                  </div>
+                            </div>
+                            </div>
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <div fxFlex.lt-sm="100%" fxFlex.gt-xs="50%" class="bx-shd">
+                                    <img src="https://storage.googleapis.com/web-assets/All-Doctors-Images/Dr.%20RR%20Kasliwal.jpg" style="width:100%;">
+                                </div>
+                            </div>
+                        </div>
+                        <div fxHide fxShow.lt-sm="true" fxFlex.gt-sm="30%"></div>
+                    </div>
+                    <div fxFlex.lt-md="100%" fxFlex.gt-sm="30%" fxLayout="column" class="desk-bg" fxFlexOrder.lt-md="2" style="background-color:#ECECEC;" >
+                       
+                        <h2 style="line-height: 1.5;font-size: 18px;font-weight:bold;padding-left: 10px;padding-bottom: 5px; padding-right: 10px;margin-top: 30px;">Here's how our Knowledge Network Works:</h2>
+                        <div fxLayout="row" class="padd-left">
+                             <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                            <p   style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;">Share your publications and publish your data</p>
+                                        </div>
+                        <div fxLayout="row" class="padd-left">
+                            <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                            <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;">Connect and collaborate with colleagues, peers, co-authors, and specialists</p>
+                        </div>
+                        <div fxLayout="row" class="padd-left">
+                            <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                        <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;">Stay Updated with Podcasts, insights, features , columns, take aways, articles and videos from Key Opinion Leaders</p>
+                        </div>
+                        <div fxLayout="row" class="padd-left">
+                            <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                            <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;">Find out who's reading your content</p>
+                        </div>
+                        <div fxLayout="row" class="padd-left">
+                            <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                            <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;margin-bottom: 30px;">Check your edited content before publishing it on our QC platform</p>
+                        </div>
+                        <p style="padding-left: 10px;"><b>Follow Us</b></p>
+                        <div fxLayout="row" style="padding-left: 20px;" fxLayoutGap="15px">
+                            <div>
+                                <a href="https://www.facebook.com/therightdoctors">
+                                <img src="https://storage.googleapis.com/web-assets/social-media-icons/new/fb-icon.png" style="height: 24px;width: 24px;"/></a>
+                            </div>
+                            <div>
+                                <a href="https://www.youtube.com/channel/UCUZIhLsNbgkCqymAZshSVHQ">
+                                <img src="https://storage.googleapis.com/web-assets/social-media-icons/youtube.png" style="height: 24px;width: 24px;"/></a>
+                            </div>
+                            <div>                                  
+                                <a href="https://twitter.com/therightdoctors">
+                                <img src="https://storage.googleapis.com/web-assets/social-media-icons/new/twitter.png" style="height: 24px;width: 24px;"/></a>
+                            </div>
+                        </div>
+                        <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;margin-bottom: 30px;">Mail your queries: <span style="color:#005082;">ms@therightdoctors.com</span></p>
+                </div>
+            </div>
+        </div>
+        </div> -->
+        
+            <div class="block3">
+                <div class="container" style="padding:0px;">
+                   
+                    <hr style="width:30px;background-color: #fe5000;height: 3px;margin-left: 0px;">
+                    <h4 class="trd-head" style="border-bottom: 5px;border-top-color:#fe5000;margin-top: 0px;">The Right Doctors</h4>
+                    <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="60px" class="inner-layer1">
+                      
+                        <div fxFlex.lt-md="100%" fxFlex.gt-sm="30%" fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="center start" fxLayout="column">
+                                <img src="assets/docs.jpg" class="img-res">
+                        </div>
+                        <div fxFlex.lt-md="100%" fxFlex.gt-sm="70%" fxLayoutAlign.gt-sm="center start" fxLayout="column">
+                            <!-- <h3 class="mob-mrg">Who we are?</h3> -->
+                            <p>TheRightDoctors is a Google Launchpad Digital Health StartUp and is one of the leaders in the production and dissemination of Medical Information. We bring Insights from the World's Best Medical Minds to digital audiences worldwide across leading digital and social media platforms.
+                                As a Google Launchpad Digital Health Product Start-Up, we bring high levels of video production, technical and content inputs to healthcare communication.  </p>
+                            
+                        </div>
+                    </div>
+                    <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="60px" class="inner-layer1">                          
+                      <div fxFlex.lt-md="100%" fxFlex.gt-sm="70%" fxLayoutAlign.gt-sm="center start" fxLayout="column">
+                            <h4>Our Achievements</h4>
+                            <p style="">TheRightDoctors has won three international recognitions: Google Launchpad ( USD200,000 in platform credit over two tranches), Berlin Bootcamp, Startupnetworkz Singapore (Start-Up of Substance) while still in pre-alpha phase. We are also a NASSCOM Showcase Start Up.</p>
+                        </div>
+                        <div fxFlex.lt-md="100%" fxFlex.gt-sm="30%" fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="center start" fxLayout="column">
+                            <div fxLayoutAlign="start center" fxFlex.gt-sm="60%"> 
+                                <img src="assets/awards.jpg" class="img-res">
+                            </div>
+                          
+                           
+                        </div>
+                       
+                    </div>
+                    <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="60px" style="background-color: #F1F1F1;">
+                      
+                        <div fxFlex.lt-md="100%" fxFlex.gt-sm="100%" fxLayoutAlign.gt-sm="center start" fxLayout="column"  fxFlexOrderlt-md="1" class="bor-pad">
+                            <!-- <h4>What we do?</h4> -->
+                            <p style="margin-bottom: 16px;">It has never been easier to publish. Smartphones come with great cameras and sound recording. Reason why almost everybody  with a smartphone is putting out content on You Tube, Linked In , Twitter, Facebook, Instagram, WhatsApp etc. How do you stand out from the clutter.  Why do you need professional digital publishing services like <a href="https://therightdoctors.com">TheRightDoctors.com</a>.</p>
+                            <p style="margin-bottom: 16px;">If self publishing is just about the ability to do it, everybody  with a laptop and printer would be publishing a book. They don't. Because publishing is not just about writing and printing. That is just the beginning.</p>
+  
+                          <p style="margin-bottom: 16px;">In the digital world , as in print, once you have a great manuscript or something useful to say, you want that to reach as many of your target audience as possible. As a high quality production. Whether it is video, audio, images or text.Check graphic design. Check world class video editing. Key Take Away Graphics. High quality podcasts. Search Engine Optimisation. Social Media Marketing. Machine Learning. Artificial Intelligence. Personalised delivery of content.Newsletters. Global reach. Endless twitter, facebook posts, And the list goes on.
+                          </p>
+                            <p style="margin-bottom: 16px;">We do this 24/7. And we are constantly learning, growing , evolving. Investing. Our time, money, energy, resources. So you don't have to.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+  </div>
+  <div class="block5" #targetone>
+      <div class="container">
+            <div fxLayout="column">
+                <h4>Careers</h4>
+              <div fxLayout.lt-md="column" fxLayout.gt-sm="row" class="bx-shd1" fxLayoutGap.gt-sm="40px">
+                  <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxFlexOrder.gt-sm="2">
+                      <img src="assets/careers.jpg" style="width:100%;">
+                  </div>
+                  <div fxFlex.lt-md="100%" fxFlex.gt-sm="50%" fxLayout="column" fxFlexOrder.gt-sm="1">
+                      <h5 class="mrg-carr">Join the TheRightDoctors Team!</h5>
+                      <h5 class="mrg-carr">To Know more about the available positions, please click the link below:</h5>
+                      <a href="https://hr.therightdoctors.com"><button mat-flat-button style="padding-left: 50px;padding-right: 50px;background-color: #15c057;color:#fff;margin-bottom: 20px;">Check positions</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="bottom">
+    <div class="container">
+        <div fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="50px">
+            <div fxFlex.lt-md="100%" fxFlex.gt-sm="70%" fxLayout="column">
+
+           
+  <!-- <div class="block6" #targetwo>
+    
+          <div class="imprint" fxLayout="column">
+              <h4>Imprint</h4>
+            <div fxLayout="column" class="diffdiv">
+                <h6 class="head">KnowledgeNetwork Website is operated by</h6>
+                <p class="para">Dr. Chandra Sekhar</p>
+          
+                <p class="para">Prakash Nagar, Begumpet</p>
+                <p class="para">Email: ms@therightdoctors.con</p>
+            </div>
+            <div fxLayout="column">
+                <h6 class="head">Managing Director:</h6>
+                <p class="para">Dr. Chandra Sekhar</p>
+            </div>
+        </div>
+      
+  </div> -->
+  <div class="block7">
+      <!-- <div class="container" fxLayout="column"> -->
+          <div fxLayout="row">
+              <h4>Press</h4>
+          </div>
+          <div fxLayout="row" class="press">
+              <p>For inquiries about KnowledgeNetwork please write to us: <b>ms@therightdoctors.com</b></p>
+          </div>
+      <!-- </div> -->
+  </div>
+  <!-- <div class="block8">
+   
+          <h4>Security</h4>
+          <div fxLayout.lt-md="column" fxLayout.gt-sm="row" class="top-class" fxLayoutGap.gt-sm="20px">
+                  <div fxFlex="100%" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="10px">
+                      <div class="border-all" fxLayout="column"> 
+                          <div fxLayout="row">
+                              <div fxFlex="90%">                                    
+                                  <p class="sec-head">Got a question about our security</p>
+                              </div>
+                              <div fxFlex="10%">
+                                  <span class="material-icons" style="font-size: 32px;">headset_mic</span>
+                              </div>
+                          </div>
+                          <div fxLayout="column">
+                              <p class="sec-para">Our team is waiting to answer all of your questions.</p>
+                              
+                              <p>Mail us your concerns:<span style="color:#005082;">ms@therightdoctors.com</span></p>
+                          </div>
+                      </div>
+                  </div>
+              
+          </div>
+        
+          
+      </div> -->
+            </div>
+    <div fxLayout="column" fxFlex.lt-md="100%" fxFlex.gt-sm="30%">
+        <!-- <div fxLayout="column" class="desk-bg" fxFlexOrder.lt-md="2" style="background-color:#ECECEC;" >
+           
+            <div fxLayout="row" class="padd-left">
+                 <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                <p   style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;">Share your publications and publish your data</p>
+                            </div>
+            <div fxLayout="row" class="padd-left">
+                <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;">Connect and collaborate with colleagues, peers, co-authors, and specialists</p>
+            </div>
+            <div fxLayout="row" class="padd-left">
+                <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+            <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;">Stay Updated with Podcasts, insights, features , columns, take aways, articles and videos from Key Opinion Leaders</p>
+            </div>
+            <div fxLayout="row" class="padd-left">
+                <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;">Find out who's reading your content</p>
+            </div>
+            <div fxLayout="row" class="padd-left">
+                <span class="material-icons" style="font-size: 18px;margin-top:4px;">arrow_forward</span>
+                <p  style="padding-left: 10px;padding-bottom: 5px; padding-right: 10px;margin-bottom: 30px;">Check your edited content before publishing it on our QC platform</p>
+            </div>
+           
+    </div> -->
+        <div fxLayout="column" class="rightside">
+            <p style="padding-left: 10px;margin-bottom: 10px;"><b>Follow Us</b></p>
+            <div fxLayout="row" style="padding-left: 20px;" fxLayoutGap="15px">
+                <div>
+                    <a href="https://www.facebook.com/therightdoctors">
+                    <img src="https://storage.googleapis.com/web-assets/social-media-icons/new/fb-icon.png" style="height: 24px;width: 24px;"/></a>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCUZIhLsNbgkCqymAZshSVHQ">
+                    <img src="https://storage.googleapis.com/web-assets/social-media-icons/youtube.png" style="height: 24px;width: 24px;"/></a>
+                </div>
+                <div>                                  
+                    <a href="https://twitter.com/therightdoctors">
+                    <img src="https://storage.googleapis.com/web-assets/social-media-icons/new/twitter.png" style="height: 24px;width: 24px;"/></a>
+                </div>
+            </div>
+            <p  style="line-height: 1.5;font-size: 18px;padding-left: 10px;padding-bottom: 5px; padding-right: 10px;margin-bottom: 30px;">Mail your queries: <span style="color:#005082;">ms@therightdoctors.com</span></p>
+        </div>
+    </div> 
+   
+</div>
+</div>
+    </div>
+
+      <app-pr-footer></app-pr-footer>
+  
+  
+       
+   
